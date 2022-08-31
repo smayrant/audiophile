@@ -1,5 +1,20 @@
+@use "../Styles/mixins.scss";
 @use "../Styles/variables.scss";
+@import url("https://fonts.googleapis.com/css?family=Manrope");
 
-.header {
+.navbar {
   background-color: variables.$main-black;
+  color: variables.$white;
+  padding: 1rem 0;
+
+  &_headerContainer {
+    @include mixins.center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      margin: 0;
+    }
+  }
 }

@@ -1,3 +1,5 @@
+$main-font: "Manrope";
+
 $main-black: #101010;
 $light-brown: #d87d4a;
 $grey: #f1f1f1;
@@ -5,3 +7,8 @@ $light-grey: #fafafa;
 $peach: #fbaf85;
 $white: #fff;
 $black: #000;
+
+// Responsive sizes
+$md-breakPt: 768px;
+$lg-breakPt: 1025px;
+$xl-breakPt: 1200px;

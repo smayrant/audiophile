@@ -1,0 +1,19 @@
+@use "./variables.scss";
+
+@mixin center {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 25px;
+}
+
+@mixin orangeButton {
+  background-color: variables.$light-brown;
+  color: variables.$light-grey;
+  border: none;
+  cursor: pointer;
+  padding: 16px 32px;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  font-size: 15px;
+  font-weight: 500;
+}
