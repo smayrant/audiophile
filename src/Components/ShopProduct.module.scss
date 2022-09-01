@@ -1,0 +1,39 @@
+@use "../Styles/variables.scss";
+
+.shopProduct {
+  position: relative;
+  margin-top: 5rem;
+
+  &_img {
+    width: 40%;
+    position: absolute;
+    translate: -50% -35%;
+  }
+
+  &_detailContainer {
+    background-color: variables.$grey;
+    border-radius: 10px;
+    padding: 3rem 2rem 0.5rem;
+
+    h6 {
+      font-size: 1.125rem;
+      text-transform: uppercase;
+      letter-spacing: 1.3px;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      color: variables.$dark-grey;
+      text-transform: uppercase;
+      font-weight: 600;
+      letter-spacing: 1.2px;
+      font-size: 15px;
+
+      span {
+        margin-left: 0.7rem;
+      }
+    }
+  }
+}

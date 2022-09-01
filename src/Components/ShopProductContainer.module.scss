@@ -1,0 +1,8 @@
+@use "../Styles/mixins.scss";
+
+.shopProductContainer {
+  text-align: center;
+  @include mixins.center;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+}
