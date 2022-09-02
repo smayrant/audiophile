@@ -1,0 +1,48 @@
+@use "../Styles/mixins.scss";
+@use "../Styles/variables.scss";
+
+.footer {
+  background-color: variables.$black;
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 4rem;
+  @include mixins.center;
+
+  &_links {
+    color: variables.$grey;
+    list-style: none;
+    padding-left: 0;
+    text-transform: uppercase;
+    font-weight: 600;
+
+    li {
+      line-height: 50px;
+      letter-spacing: 1.5px;
+    }
+  }
+
+  img {
+    margin-bottom: 1rem;
+  }
+
+  &_text {
+    @include mixins.text;
+    color: variables.$dark-grey;
+    font-weight: 500;
+  }
+
+  &_copyright {
+    color: variables.$dark-grey;
+    font-weight: 600;
+    margin: 2.5rem 0;
+  }
+
+  &_iconContainer {
+    max-width: 105px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 50%;
+    padding-left: 0;
+  }
+}

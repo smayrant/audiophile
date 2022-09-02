@@ -15,10 +15,7 @@
     translate: 10% -170%;
 
     h4 {
-      font-size: 1.75rem;
-      text-transform: uppercase;
-      font-weight: 700;
-      letter-spacing: 1.15px;
+      @include mixins.h4;
     }
 
     button {

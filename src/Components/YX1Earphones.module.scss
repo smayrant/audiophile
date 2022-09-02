@@ -1,0 +1,32 @@
+@use "../Styles/mixins.scss";
+@use "../Styles/variables.scss";
+
+.yx1 {
+  @include mixins.center;
+  margin-top: 1.5rem;
+
+  &_infoContainer {
+    margin-top: 1.5rem;
+    background-color: variables.$grey;
+    border-radius: 10px;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+    div {
+      margin-left: 26px;
+    }
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  h4 {
+    @include mixins.h4;
+  }
+
+  button {
+    @include mixins.transparentButton;
+  }
+}
