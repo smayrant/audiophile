@@ -1,8 +1,8 @@
 import classes from "./ShopProductContainer.module.scss";
-import ShopProduct from "./ShopProduct";
-import earphonesThumbnail from "../Assets/Images/category-thumbnail-earphones.png";
-import speakersThumbnail from "../Assets/Images/category-thumbnail-speakers.png";
-import headphonesThumbnail from "../Assets/Images/category-thumbnail-headphones.png";
+import ShopProduct from "../ShopProduct/ShopProduct";
+import earphonesThumbnail from "../../Assets/Images/category-thumbnail-earphones.png";
+import speakersThumbnail from "../../Assets/Images/category-thumbnail-speakers.png";
+import headphonesThumbnail from "../../Assets/Images/category-thumbnail-headphones.png";
 
 function ShopProductContainer() {
   return (

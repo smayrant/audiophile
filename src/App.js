@@ -1,23 +1,18 @@
-import Hero from "./Components/Hero";
-import Navbar from "./Components/Navbar";
-import ShopProductContainer from "./Components/ShopProductContainer";
-import ZX9Speaker from "./Components/ZX9Speaker";
-import ZX7Speaker from "./Components/ZX7Speaker";
-import YX1Earphones from "./Components/YX1Earphones";
-import BestGear from "./Components/BestGear";
-import Footer from "./Components/Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home/home";
+import Headphones from "./Pages/Headphones/Headphones";
+import Speakers from "./Pages/Speakers/Speakers";
+import Earphones from "./Pages/Earphones/Earphones";
 
 function App() {
   return (
     <div className="App">
-      <Navbar />
-      <Hero />
-      <ShopProductContainer />
-      <ZX9Speaker />
-      <ZX7Speaker />
-      <YX1Earphones />
-      <BestGear />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/headphones" element={<Headphones />} />
+        <Route path="/speakers" element={<Speakers />} />
+        <Route path="/earphones" element={<Earphones />} />
+      </Routes>
     </div>
   );
 }

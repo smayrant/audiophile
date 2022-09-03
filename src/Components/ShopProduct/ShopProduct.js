@@ -1,5 +1,6 @@
 import classes from "./ShopProduct.module.scss";
-import rightArrow from "../Assets/Images/arrow-right.svg";
+import rightArrow from "../../Assets/Images/arrow-right.svg";
+import { Link } from "react-router-dom";
 
 function ShopProduct(props) {
   return (
@@ -11,12 +12,12 @@ function ShopProduct(props) {
       />
       <div className={classes.shopProduct_detailContainer}>
         <h6>{props.productName}</h6>
-        <p>
+        <Link to={`/${props.productName}`}>
           shop{" "}
           <span>
             <img src={rightArrow} alt="Right arrow icon" />
           </span>
-        </p>
+        </Link>
       </div>
     </div>
   );

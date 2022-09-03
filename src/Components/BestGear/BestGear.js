@@ -1,4 +1,4 @@
-import bestGearImg from "../Assets/Images/best-gear-mobile.jpg";
+import bestGearImg from "../../Assets/Images/best-gear-mobile.jpg";
 import classes from "./BestGear.module.scss";
 
 function BestGear() {

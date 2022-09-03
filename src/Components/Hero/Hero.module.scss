@@ -1,12 +1,12 @@
-@use "../Styles/variables.scss";
-@use "../Styles/mixins.scss";
+@use "../../Styles/variables.scss";
+@use "../../Styles/mixins.scss";
 
 .hero {
   margin-top: 0;
   padding-top: 8rem;
   padding-bottom: 28rem;
   background-color: variables.$main-black;
-  background-image: url("../Assets/Images/hero-headphones.jpg");
+  background-image: url("../../Assets/Images/hero-headphones.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;

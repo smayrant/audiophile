@@ -1,4 +1,4 @@
-import speaker from "../Assets/Images/speaker-zx7-mobile.jpg";
+import speaker from "../../Assets/Images/speaker-zx7-mobile.jpg";
 import classes from "./ZX7Speaker.module.scss";
 
 function ZX7Speaker() {

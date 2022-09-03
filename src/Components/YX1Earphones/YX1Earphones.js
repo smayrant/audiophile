@@ -1,6 +1,6 @@
 import React from "react";
 import classes from "./YX1Earphones.module.scss";
-import earphones from "../Assets/Images/earphones-yx1.jpg";
+import earphones from "../../Assets/Images/earphones-yx1.jpg";
 
 function YX1Earphones() {
   return (

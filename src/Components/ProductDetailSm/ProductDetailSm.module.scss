@@ -1,13 +1,10 @@
-@use "../Styles/mixins.scss";
-@use "../Styles/variables.scss";
+@use "../../Styles/mixins.scss";
+@use "../../Styles/variables.scss";
 
-.bestGear {
+.productDetailsSm {
   @include mixins.center;
-  margin-top: 7rem;
-
-  &_infoContainer {
-    text-align: center;
-  }
+  margin-top: 4rem;
+  text-align: center;
 
   img {
     width: 100%;
@@ -16,15 +13,16 @@
 
   h4 {
     @include mixins.h4;
-
-    span {
-      color: variables.$light-brown;
-    }
   }
 
   p {
     @include mixins.text;
     color: variables.$dark-grey;
     font-weight: 500;
+    margin-bottom: 1.5rem;
+  }
+
+  button {
+    @include mixins.orangeButton;
   }
 }

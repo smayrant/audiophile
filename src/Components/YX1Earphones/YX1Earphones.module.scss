@@ -1,5 +1,5 @@
-@use "../Styles/mixins.scss";
-@use "../Styles/variables.scss";
+@use "../../Styles/mixins.scss";
+@use "../../Styles/variables.scss";
 
 .yx1 {
   @include mixins.center;

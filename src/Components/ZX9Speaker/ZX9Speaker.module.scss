@@ -1,12 +1,12 @@
-@use "../Styles/mixins.scss";
-@use "../Styles/variables.scss";
+@use "../../Styles/mixins.scss";
+@use "../../Styles/variables.scss";
 
 .zx9 {
   @include mixins.center;
 
   &Container {
     background-color: variables.$light-brown;
-    background-image: url("../Assets/Images/pattern-circles.svg");
+    background-image: url("../../Assets/Images/pattern-circles.svg");
     background-size: 175%;
     background-repeat: no-repeat;
     background-position: 50% -170%;

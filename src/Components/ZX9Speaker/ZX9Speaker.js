@@ -1,5 +1,5 @@
 import classes from "./ZX9Speaker.module.scss";
-import speaker from "../Assets/Images/speaker-zx9-mobile.png";
+import speaker from "../../Assets/Images/speaker-zx9-mobile.png";
 
 function ZX9Speaker() {
   return (
