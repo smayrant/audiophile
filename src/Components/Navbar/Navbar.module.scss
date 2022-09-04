@@ -4,7 +4,7 @@
 .navbar {
   background-color: variables.$black;
   color: variables.$white;
-  padding: 2rem 0;
+  padding: 2.05rem 0;
 
   &_headerContainer {
     @include mixins.center;

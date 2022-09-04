@@ -3,7 +3,8 @@
 
 .heading {
   background-color: variables.$black;
-  padding: 1rem;
+  padding: 1.23rem;
+  margin-bottom: 4rem;
 
   h4 {
     @include mixins.h4;

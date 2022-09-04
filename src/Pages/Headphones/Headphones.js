@@ -7,6 +7,7 @@ import xx59Img from "../../Assets/Images/category-page-xx59-mobile.jpg";
 import ShopProductContainer from "../../Components/ShopProductContainer/ShopProductContainer";
 import BestGear from "../../Components/BestGear/BestGear";
 import Footer from "../../Components/Footer/Footer";
+import classes from "../../Components/ProductDetailSm/ProductDetailSm.module.scss";
 
 function Headphones() {
   const mark2Text =
@@ -22,21 +23,36 @@ function Headphones() {
     <div>
       <Navbar />
       <Heading title={"headphones"} />
-      <ProductDetailSm
-        imgSrc={mark2Img}
-        title={"xx99 markii headphones"}
-        text={mark2Text}
-      />
-      <ProductDetailSm
-        imgSrc={mark1Img}
-        title={"xx99 marki headphones"}
-        text={mark1Text}
-      />
-      <ProductDetailSm
-        imgSrc={xx59Img}
-        title={"xx59 headphones"}
-        text={xx59Text}
-      />
+      <div className={classes.productDetailSm_container}>
+        <ProductDetailSm
+          newProduct={true}
+          imgSrc={mark2Img}
+          title={"xx99 markii headphones"}
+          text={mark2Text}
+          seeProduct={true}
+          addToCart={false}
+        />
+      </div>
+      <div className={classes.productDetailSm_container}>
+        <ProductDetailSm
+          newProduct={false}
+          imgSrc={mark1Img}
+          title={"xx99 marki headphones"}
+          text={mark1Text}
+          seeProduct={true}
+          addToCart={false}
+        />
+      </div>
+      <div className={classes.productDetailSm_container}>
+        <ProductDetailSm
+          newProduct={false}
+          imgSrc={xx59Img}
+          title={"xx59 headphones"}
+          text={xx59Text}
+          seeProduct={true}
+          addToCart={false}
+        />
+      </div>
       <ShopProductContainer />
       <BestGear />
       <Footer />

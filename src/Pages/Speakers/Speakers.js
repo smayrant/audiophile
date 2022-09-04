@@ -6,6 +6,7 @@ import zx7Img from "../../Assets/Images/category-page-zx7-mobile.jpg";
 import ShopProductContainer from "../../Components/ShopProductContainer/ShopProductContainer";
 import BestGear from "../../Components/BestGear/BestGear";
 import Footer from "../../Components/Footer/Footer";
+import classes from "../../Components/ProductDetailSm/ProductDetailSm.module.scss";
 
 function Speakers() {
   const zx9Text =
@@ -18,8 +19,26 @@ function Speakers() {
     <div>
       <Navbar />
       <Heading title={"speakers"} />
-      <ProductDetailSm imgSrc={zx9Img} title={"zx9 speaker"} text={zx9Text} />
-      <ProductDetailSm imgSrc={zx7Img} title={"zx7 speaker"} text={zx7Text} />
+      <div className={classes.productDetailSm_container}>
+        <ProductDetailSm
+          newProduct={true}
+          imgSrc={zx9Img}
+          title={"zx9 speaker"}
+          text={zx9Text}
+          seeProduct={true}
+          addToCart={false}
+        />
+      </div>
+      <div className={classes.productDetailSm_container}>
+        <ProductDetailSm
+          newProduct={false}
+          imgSrc={zx7Img}
+          title={"zx7 speaker"}
+          text={zx7Text}
+          seeProduct={true}
+          addToCart={false}
+        />
+      </div>
       <ShopProductContainer />
       <BestGear />
       <Footer />

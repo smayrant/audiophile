@@ -5,6 +5,7 @@ import ProductDetailSm from "../../Components/ProductDetailSm/ProductDetailSm";
 import BestGear from "../../Components/BestGear/BestGear";
 import Footer from "../../Components/Footer/Footer";
 import ShopProductContainer from "../../Components/ShopProductContainer/ShopProductContainer";
+import classes from "../../Components/ProductDetailSm/ProductDetailSm.module.scss";
 
 function Earphones() {
   const text =
@@ -13,7 +14,16 @@ function Earphones() {
     <div>
       <Navbar />
       <Heading title={"speakers"} />
-      <ProductDetailSm imgSrc={img} title={"zx9 speaker"} text={text} />
+      <div className={classes.productDetailSm_container}>
+        <ProductDetailSm
+          newProduct={true}
+          imgSrc={img}
+          title={"zx9 speaker"}
+          text={text}
+          seeProduct={true}
+          addToCart={false}
+        />
+      </div>
 
       <ShopProductContainer />
       <BestGear />

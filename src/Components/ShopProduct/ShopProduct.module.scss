@@ -6,6 +6,7 @@
 
   &_img {
     width: 40%;
+    max-width: 147px;
     position: absolute;
     translate: -50% -35%;
   }
@@ -13,13 +14,13 @@
   &_detailContainer {
     background-color: variables.$grey;
     border-radius: 10px;
-    padding: 3rem 2rem 0.5rem;
+    padding: 5.5rem 2rem 0.5rem;
 
     h6 {
       font-size: 1.125rem;
       text-transform: uppercase;
-      letter-spacing: 1.3px;
-      font-weight: 600;
+      letter-spacing: 1.07px;
+      font-weight: 700;
       margin-top: 1.5rem;
       margin-bottom: 1.5rem;
     }

@@ -1,10 +1,32 @@
 @use "../../Styles/mixins.scss";
 @use "../../Styles/variables.scss";
 
-.productDetailsSm {
+.productDetailSm {
   @include mixins.center;
-  margin-top: 4rem;
-  text-align: center;
+  margin-bottom: 7.5rem;
+
+  &_container {
+    text-align: center;
+  }
+
+  &_price {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 1.285px;
+    color: variables.$black;
+  }
+
+  &_qtBtn {
+    border: unset;
+  }
+
+  h6 {
+    @include mixins.newProduct;
+    color: variables.$light-brown;
+    margin-top: 2rem;
+    margin-bottom: 1.95rem;
+  }
 
   img {
     width: 100%;
@@ -17,9 +39,13 @@
 
   p {
     @include mixins.text;
-    color: variables.$dark-grey;
+    color: variables.$black;
     font-weight: 500;
     margin-bottom: 1.5rem;
+    font-size: 15px;
+    line-height: 25px;
+    opacity: 0.5;
+    mix-blend-mode: normal;
   }
 
   button {
