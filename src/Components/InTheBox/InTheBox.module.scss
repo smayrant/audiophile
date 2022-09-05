@@ -1,0 +1,9 @@
+@use "../../Styles/mixins.scss";
+
+.inTheBox {
+  @include mixins.center;
+
+  h5 {
+    @include mixins.h5;
+  }
+}

@@ -15,10 +15,29 @@
     line-height: 25px;
     letter-spacing: 1.285px;
     color: variables.$black;
+    margin-top: 1.75rem;
   }
 
-  &_qtBtn {
-    border: unset;
+  &_purchaseContainer {
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+  }
+
+  &_qtContainer {
+    margin-right: 1rem;
+  }
+
+  &_qtUp,
+  &_qtDown {
+    @include mixins.qtyButtons;
+    padding: 1.016rem 1.568rem;
+  }
+
+  &_qt {
+    @include mixins.qty;
+    padding-top: 1.016rem;
+    padding-bottom: 1.016rem;
   }
 
   h6 {
@@ -30,7 +49,7 @@
 
   img {
     width: 100%;
-    border-radius: 10px;
+    border-radius: 8px;
   }
 
   h4 {
@@ -41,7 +60,8 @@
     @include mixins.text;
     color: variables.$black;
     font-weight: 500;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.75rem;
+    margin-top: 1.75rem;
     font-size: 15px;
     line-height: 25px;
     opacity: 0.5;
@@ -51,4 +71,8 @@
   button {
     @include mixins.orangeButton;
   }
+}
+
+#productDetailSm_addToCart {
+  margin-top: 0;
 }

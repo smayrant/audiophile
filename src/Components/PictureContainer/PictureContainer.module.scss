@@ -1,0 +1,12 @@
+@use "../../Styles/mixins.scss";
+
+.pictureContainer {
+  @include mixins.center;
+  margin-top: 5.5rem;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+  }
+}
