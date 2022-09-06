@@ -1,7 +1,7 @@
 import ProductDetailSm from "../../../../Components/ProductDetailSm/ProductDetailSm";
-import mark2Img from "../../../../Assets/Images/category-page-xx992-mobile.jpg";
+import mark1Img from "../../../../Assets/Images/category-page-xx991-mobile.jpg";
 import Navbar from "../../../../Components/Navbar/Navbar";
-import classes from "./MarkII.module.scss";
+import classes from "./MarkI.module.scss";
 import GoBackButton from "../../../../Components/GoBackButton/GoBackButton";
 import Features from "../../../../Components/Features/Features";
 import InTheBox from "../../../../Components/InTheBox/InTheBox";
@@ -10,33 +10,33 @@ import SeeProduct from "../../../../Components/SeeProduct/SeeProduct";
 import ShopProductContainer from "../../../../Components/ShopProductContainer/ShopProductContainer";
 import BestGear from "../../../../Components/BestGear/BestGear";
 import Footer from "../../../../Components/Footer/Footer";
-import galleryImg1 from "../../../../Assets/Images/mark2-gallery-1-mobile.jpg";
-import galleryImg2 from "../../../../Assets/Images/mark2-gallery-2-mobile.jpg";
-import galleryImg3 from "../../../../Assets/Images/mark2-gallery-3-mobile.jpg";
-import mayLikeImg1 from "../../../../Assets/Images/xx99-mayLike-mobile.jpg";
+import galleryImg1 from "../../../../Assets/Images/mark1-gallery-1-mobile.jpg";
+import galleryImg2 from "../../../../Assets/Images/mark1-gallery-2-mobile.jpg";
+import galleryImg3 from "../../../../Assets/Images/mark1-gallery-3-mobile.jpg";
+import mayLikeImg1 from "../../../../Assets/Images/xx99ii-mayLike-mobile.jpg";
 import mayLikeImg2 from "../../../../Assets/Images/xx59-mayLike-mobile.jpg";
 import mayLikeImg3 from "../../../../Assets/Images/zx9-mayLike-mobile.jpg";
 
-function MarkII() {
-  const mark2Text =
-    "The new XX99 Mark II headphones is the pinnacle of pristine audio. It redefines your premium headphone experience by reproducing the balanced depth and precision of studio-quality sound.";
+function MarkI() {
+  const mark1Text =
+    "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.";
 
   const paragraph1 =
-    "Featuring a genuine leather head strap and premium earcups, these headphones deliver superior comfort for those who like to enjoy endless listening. It includes intuitive controls designed for any situation. Whether you’re taking a business call or just in your own personal space, the auto on/off and pause features ensure that you’ll never miss a beat. ";
+    "As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades of audio expertise, redefining the critical listening experience. This pair of closed-back headphones are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz.  ";
 
   const paragraph2 =
-    "The advanced Active Noise Cancellation with built-in equalizer allow you to experience your audio world on your terms. It lets you enjoy your audio in peace, but quickly interact with your surroundings when you need to. Combined with Bluetooth 5. 0 compliant connectivity and 17 hour battery life, the XX99 Mark II headphones gives you superior sound, cutting-edge technology, and a modern design aesthetic.";
+    "From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector.";
   return (
-    <div className={classes.markII}>
+    <div className={classes.markI}>
       <Navbar />
       <GoBackButton />
       <ProductDetailSm
         newProduct={true}
-        imgSrc={mark2Img}
-        title={"xx99 markii headphones"}
-        text={mark2Text}
+        imgSrc={mark1Img}
+        title={"xx99 marki headphones"}
+        text={mark1Text}
         seeProduct={false}
-        price={"$2,999"}
+        price={"$1,750"}
         addToCart={true}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
@@ -49,8 +49,8 @@ function MarkII() {
       <h5>you may also like</h5>
       <SeeProduct
         imgSrc={mayLikeImg1}
-        imgAlt={"XX99 Mark I Headphones"}
-        title={"xx99 mark i"}
+        imgAlt={"XX99 Mark II Headphones"}
+        title={"xx99 mark ii"}
       />
       <SeeProduct
         imgSrc={mayLikeImg2}
@@ -69,4 +69,4 @@ function MarkII() {
   );
 }
 
-export default MarkII;
+export default MarkI;

@@ -1,0 +1,24 @@
+@use "../../Styles/mixins.scss";
+
+.seeProduct {
+  @include mixins.center;
+  text-align: center;
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+  }
+
+  h5 {
+    @include mixins.h5;
+    margin-top: 0;
+    margin-bottom: calc(2rem - 1.5rem);
+  }
+
+  button {
+    margin-top: 0;
+    margin-bottom: 3.5rem;
+    @include mixins.orangeButton;
+  }
+}

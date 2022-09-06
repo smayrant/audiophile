@@ -4,6 +4,7 @@ import Headphones from "./Pages/Headphones/Headphones";
 import Speakers from "./Pages/Speakers/Speakers";
 import Earphones from "./Pages/Earphones/Earphones";
 import MarkII from "./Pages/Products/Headphones/MarkII/MarkII";
+import MarkI from "./Pages/Products/Headphones/MarkI/MarkI";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/speakers" element={<Speakers />} />
         <Route path="/earphones" element={<Earphones />} />
         <Route path="/products/mark-ii-headphones" element={<MarkII />} />
+        <Route path="/products/mark-i-headphones" element={<MarkI />} />
       </Routes>
     </div>
   );
