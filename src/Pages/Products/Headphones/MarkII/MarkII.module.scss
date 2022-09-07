@@ -2,6 +2,10 @@
 @use "../../../../Styles/variables.scss";
 
 .markII {
+  &_mayLike_heading {
+    text-align: center;
+  }
+
   &_btn {
     button {
       border: unset;
@@ -16,9 +20,22 @@
     }
   }
 
+  &_inTheBox {
+    @include mixins.center;
+    margin-bottom: 1.5rem;
+  }
+
+  ul {
+    @include mixins.ul;
+    @include mixins.center;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+
   h5 {
     @include mixins.h5;
-    text-align: center;
     margin-bottom: 2.5rem;
   }
 }

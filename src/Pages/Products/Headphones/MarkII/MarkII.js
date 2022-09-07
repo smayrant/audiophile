@@ -4,7 +4,7 @@ import Navbar from "../../../../Components/Navbar/Navbar";
 import classes from "./MarkII.module.scss";
 import GoBackButton from "../../../../Components/GoBackButton/GoBackButton";
 import Features from "../../../../Components/Features/Features";
-import InTheBox from "../../../../Components/InTheBox/InTheBox";
+import InTheBoxItem from "../../../../Components/InTheBoxItem/InTheBoxItem";
 import PictureContainer from "../../../../Components/PictureContainer/PictureContainer";
 import SeeProduct from "../../../../Components/SeeProduct/SeeProduct";
 import ShopProductContainer from "../../../../Components/ShopProductContainer/ShopProductContainer";
@@ -40,13 +40,31 @@ function MarkII() {
         addToCart={true}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
-      <InTheBox itemsInBox={3} qt={1} />
+      <h5 className={classes.markII_inTheBox}>in the box</h5>
+      <ul>
+        <li>
+          <InTheBoxItem qty={1} boxItem={"headphone unit"} />
+        </li>
+        <li>
+          <InTheBoxItem qty={2} boxItem={"replacement earcups"} />
+        </li>
+        <li>
+          <InTheBoxItem qty={1} boxItem={"user manual"} />
+        </li>
+        <li>
+          <InTheBoxItem qty={1} boxItem={"3.5mm 5m audio cable"} />
+        </li>
+        <li>
+          <InTheBoxItem qty={1} boxItem={"travel bag"} />
+        </li>
+      </ul>
+
       <PictureContainer
         img1={galleryImg1}
         img2={galleryImg2}
         img3={galleryImg3}
       />
-      <h5>you may also like</h5>
+      <h5 className={classes.markII_mayLike_heading}>you may also like</h5>
       <SeeProduct
         imgSrc={mayLikeImg1}
         imgAlt={"XX99 Mark I Headphones"}

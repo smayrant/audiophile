@@ -1,14 +1,11 @@
 @use "../../../../Styles/mixins.scss";
 
-.markI {
-  &_mayLike_heading {
-    text-align: center;
-  }
-
+.xx59 {
   h5 {
     @include mixins.center;
     @include mixins.h5;
     margin-bottom: 2.5rem;
+    text-align: center;
   }
 
   ul {

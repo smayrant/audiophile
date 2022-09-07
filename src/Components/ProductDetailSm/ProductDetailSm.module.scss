@@ -54,6 +54,7 @@
 
   h4 {
     @include mixins.h4;
+    max-width: 195px;
   }
 
   p {

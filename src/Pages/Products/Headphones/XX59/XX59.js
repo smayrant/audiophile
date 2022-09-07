@@ -1,7 +1,7 @@
 import ProductDetailSm from "../../../../Components/ProductDetailSm/ProductDetailSm";
-import mark1Img from "../../../../Assets/Images/category-page-xx991-mobile.jpg";
+import xx59Img from "../../../../Assets/Images/category-page-xx59-mobile.jpg";
 import Navbar from "../../../../Components/Navbar/Navbar";
-import classes from "./MarkI.module.scss";
+import classes from "./XX59.module.scss";
 import GoBackButton from "../../../../Components/GoBackButton/GoBackButton";
 import Features from "../../../../Components/Features/Features";
 import InTheBoxItem from "../../../../Components/InTheBoxItem/InTheBoxItem";
@@ -10,37 +10,37 @@ import SeeProduct from "../../../../Components/SeeProduct/SeeProduct";
 import ShopProductContainer from "../../../../Components/ShopProductContainer/ShopProductContainer";
 import BestGear from "../../../../Components/BestGear/BestGear";
 import Footer from "../../../../Components/Footer/Footer";
-import galleryImg1 from "../../../../Assets/Images/mark1-gallery-1-mobile.jpg";
-import galleryImg2 from "../../../../Assets/Images/mark1-gallery-2-mobile.jpg";
-import galleryImg3 from "../../../../Assets/Images/mark1-gallery-3-mobile.jpg";
+import galleryImg1 from "../../../../Assets/Images/xx59-gallery-1-mobile.jpg";
+import galleryImg2 from "../../../../Assets/Images/xx59-gallery-2-mobile.jpg";
+import galleryImg3 from "../../../../Assets/Images/xx59-gallery-3-mobile.jpg";
 import mayLikeImg1 from "../../../../Assets/Images/xx99ii-mayLike-mobile.jpg";
-import mayLikeImg2 from "../../../../Assets/Images/xx59-mayLike-mobile.jpg";
+import mayLikeImg2 from "../../../../Assets/Images/xx99-mayLike-mobile.jpg";
 import mayLikeImg3 from "../../../../Assets/Images/zx9-mayLike-mobile.jpg";
 
-function MarkI() {
-  const mark1Text =
-    "As the gold standard for headphones, the classic XX99 Mark I offers detailed and accurate audio reproduction for audiophiles, mixing engineers, and music aficionados alike in studios and on the go.";
+function XX59() {
+  const xx59Text =
+    "Enjoy your audio almost anywhere and customize it to your specific tastes with the XX59 headphones. The stylish yet durable versatile wireless headset is a brilliant companion at home or on the move.";
 
   const paragraph1 =
-    "As the headphones all others are measured against, the XX99 Mark I demonstrates over five decades of audio expertise, redefining the critical listening experience. This pair of closed-back headphones are made of industrial, aerospace-grade materials to emphasize durability at a relatively light weight of 11 oz.  ";
+    "These headphones have been created from durable, high-quality materials tough enough to take anywhere. Its compact folding design fuses comfort and minimalist style making it perfect for travel. Flawless transmission is assured by the latest wireless technology engineered for audio synchronization with videos. ";
 
   const paragraph2 =
-    "From the handcrafted microfiber ear cushions to the robust metal headband with inner damping element, the components work together to deliver comfort and uncompromising sound. Its closed-back design delivers up to 27 dB of passive noise cancellation, reducing resonance by reflecting sound to a dedicated absorber. For connectivity, a specially tuned cable is included with a balanced gold connector.";
+    "More than a simple pair of headphones, this headset features a pair of built-in microphones for clear, hands-free calling when paired with a compatible smartphone. Controlling music and calls is also intuitive thanks to easy-access touch buttons on the earcups. Regardless of how you use the  XX59 headphones, you can do so all day thanks to an impressive 30-hour battery life that can be rapidly recharged via USB-C.";
   return (
-    <div className={classes.markI}>
+    <div className={classes.xx59}>
       <Navbar />
       <GoBackButton />
       <ProductDetailSm
         newProduct={false}
-        imgSrc={mark1Img}
-        title={"xx99 marki headphones"}
-        text={mark1Text}
+        imgSrc={xx59Img}
+        title={"xx59 headphones"}
+        text={xx59Text}
         seeProduct={false}
-        price={"$1,750"}
+        price={"$899"}
         addToCart={true}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
-      <h5 className={classes.markII_inTheBox}>in the box</h5>
+      <h5 className={classes.xx59_inTheBox}>in the box</h5>
       <ul>
         <li>
           <InTheBoxItem qty={1} boxItem={"headphone unit"} />
@@ -55,15 +55,16 @@ function MarkI() {
           <InTheBoxItem qty={1} boxItem={"3.5mm 5m audio cable"} />
         </li>
       </ul>
+
       <PictureContainer
         img1={galleryImg1}
         img2={galleryImg2}
         img3={galleryImg3}
       />
-      <h5 className={classes.markI_mayLike_heading}>you may also like</h5>
+      <h5 className={classes.xx59_mayLike_heading}>you may also like</h5>
       <SeeProduct
         imgSrc={mayLikeImg1}
-        imgAlt={"XX99 Mark II Headphones"}
+        imgAlt={"XX99 Mark I Headphones"}
         title={"xx99 mark ii"}
       />
       <SeeProduct
@@ -83,4 +84,4 @@ function MarkI() {
   );
 }
 
-export default MarkI;
+export default XX59;
