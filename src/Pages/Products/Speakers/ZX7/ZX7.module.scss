@@ -1,0 +1,24 @@
+@use "../../../../Styles/mixins.scss";
+
+.zx7 {
+  &_inTheBox {
+    @include mixins.center;
+    margin-bottom: 1.5rem;
+  }
+
+  &_mayLike_heading {
+    text-align: center;
+  }
+  h5 {
+    @include mixins.h5;
+  }
+
+  ul {
+    @include mixins.ul;
+    @include mixins.center;
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+  }
+}
