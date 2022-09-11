@@ -7,7 +7,7 @@
   position: relative;
   img {
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: variables.$radius;
   }
 
   &_info {
@@ -15,7 +15,7 @@
     translate: 10% -170%;
 
     h4 {
-      @include mixins.h4;
+      @include mixins.h3;
     }
 
     button {

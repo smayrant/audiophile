@@ -4,7 +4,7 @@ function SeeProduct(props) {
   return (
     <div className={classes.seeProduct}>
       <img src={props.imgSrc} alt={props.imgAlt} />
-      <h5>{props.title}</h5>
+      <h3>{props.title}</h3>
       <button>see product</button>
     </div>
   );

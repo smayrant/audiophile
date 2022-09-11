@@ -47,16 +47,23 @@
   font-weight: 500;
 }
 
-// mixin for all h4 elements
-@mixin h4 {
+// mixins for all heading elements
+@mixin h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 1.29px;
+  text-transform: uppercase;
+}
+@mixin h3 {
   font-size: 1.75rem;
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 1px;
-  line-height: 38px;
+  line-height: 38.25px;
 }
 
-@mixin h5 {
+@mixin h4 {
   font-size: 1.5rem;
   text-transform: uppercase;
   font-weight: 700;
@@ -64,7 +71,14 @@
   line-height: 36px;
 }
 
-// mixin for the items with the new product heading
+@mixin h5 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  letter-spacing: 1.29px;
+  text-transform: uppercase;
+}
+
+// mixin for the items with the new product sub-heading
 
 @mixin newProduct {
   font-size: 14px;
@@ -95,4 +109,23 @@
   font-size: 13px;
   line-height: 18px;
   letter-spacing: 1px;
+}
+
+// checkout mixins
+@mixin inputLabel {
+  color: variables.$black;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16.39px;
+  letter-spacing: -0.21px;
+}
+
+@mixin input {
+  margin-top: 0.55rem;
+  margin-bottom: 1.5rem;
+  padding-top: 1.125rem;
+  padding-bottom: 1.125rem;
+  padding-left: 1.5rem;
+  border: 1px solid variables.$inputBorder;
+  border-radius: variables.$radius;
 }

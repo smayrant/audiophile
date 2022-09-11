@@ -1,0 +1,23 @@
+@use "../../Styles/variables.scss";
+
+.summaryItem {
+  &_container {
+    display: flex;
+
+    img {
+      border-radius: variables.$radius;
+      height: 64px;
+      width: 64px;
+    }
+  }
+
+  &_infoContainer {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+  }
+}

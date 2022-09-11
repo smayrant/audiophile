@@ -6,9 +6,9 @@ function ZX9Speaker() {
     <div className={classes.zx9}>
       <div className={classes.zx9Container}>
         <img src={speaker} alt="" />
-        <h3>
+        <h2>
           zx9 <span>speaker</span>
-        </h3>
+        </h2>
         <p>
           Upgrade to premium speakers that are phenomenally built to deliver
           truly remarkable sound.

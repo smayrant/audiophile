@@ -4,7 +4,7 @@ function ProductDetailSm(props) {
   return (
     <div className={classes.productDetailSm}>
       <img src={props.imgSrc} alt={props.alt} />
-      {props.newProduct && <h6>new product</h6>}
+      {props.newProduct && <h5>new product</h5>}
       <h4>{props.title}</h4>
       <p>{props.text}</p>
       {props.seeProduct && <button>see product</button>}

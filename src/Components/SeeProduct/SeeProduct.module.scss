@@ -1,4 +1,5 @@
 @use "../../Styles/mixins.scss";
+@use "../../Styles/variables.scss";
 
 .seeProduct {
   @include mixins.center;
@@ -6,12 +7,12 @@
 
   img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: variables.$radius;
     margin-bottom: 2rem;
   }
 
-  h5 {
-    @include mixins.h5;
+  h3 {
+    @include mixins.h3;
     margin-top: 0;
     margin-bottom: calc(2rem - 1.5rem);
   }

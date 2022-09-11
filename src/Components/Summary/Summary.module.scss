@@ -1,0 +1,11 @@
+@use "../../Styles/mixins.scss";
+
+.summary {
+  @include mixins.center;
+  margin-left: 24px;
+  margin-right: 24px;
+
+  h5 {
+    @include mixins.h5;
+  }
+}

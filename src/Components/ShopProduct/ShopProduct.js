@@ -11,7 +11,7 @@ function ShopProduct(props) {
         alt={props.alt}
       />
       <div className={classes.shopProduct_detailContainer}>
-        <h6>{props.productName}</h6>
+        <h5>{props.productName}</h5>
         <Link to={`/${props.productName}`}>
           shop{" "}
           <span>

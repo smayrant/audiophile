@@ -8,7 +8,7 @@
   &_infoContainer {
     margin-top: 1.5rem;
     background-color: variables.$grey;
-    border-radius: 8px;
+    border-radius: variables.$radius;
     padding-top: 1rem;
     padding-bottom: 2rem;
 
@@ -19,11 +19,11 @@
 
   img {
     max-width: 100%;
-    border-radius: 8px;
+    border-radius: variables.$radius;
   }
 
   h4 {
-    @include mixins.h4;
+    @include mixins.h3;
   }
 
   button {

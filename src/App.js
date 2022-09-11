@@ -9,6 +9,7 @@ import XX59 from "./Pages/Products/Headphones/XX59/XX59";
 import ZX9 from "./Pages/Products/Speakers/ZX9/ZX9";
 import ZX7 from "./Pages/Products/Speakers/ZX7/ZX7";
 import YX1 from "./Pages/Products/Earphones/YX1/YX1";
+import Checkout from "./Pages/Checkout/Checkout";
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
         <Route path="/products/zx9-speaker" element={<ZX9 />} />
         <Route path="/products/zx7-speaker" element={<ZX7 />} />
         <Route path="/products/yx1-earphones" element={<YX1 />} />
+        <Route path="/checkout" element={<Checkout />} />
       </Routes>
     </div>
   );

@@ -1,9 +1,9 @@
 @use "../../../../Styles/mixins.scss";
 
 .xx59 {
-  h5 {
+  h4 {
     @include mixins.center;
-    @include mixins.h5;
+    @include mixins.h4;
     margin-bottom: 2.5rem;
     text-align: center;
   }

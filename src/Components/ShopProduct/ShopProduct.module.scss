@@ -13,10 +13,10 @@
 
   &_detailContainer {
     background-color: variables.$grey;
-    border-radius: 8px;
+    border-radius: variables.$radius;
     padding: 5.5rem 2rem 0.5rem;
 
-    h6 {
+    h5 {
       font-size: 1.125rem;
       text-transform: uppercase;
       letter-spacing: 1.07px;

@@ -40,7 +40,7 @@
     padding-bottom: 1.016rem;
   }
 
-  h6 {
+  h5 {
     @include mixins.newProduct;
     color: variables.$light-brown;
     margin-top: 2rem;
@@ -49,11 +49,11 @@
 
   img {
     width: 100%;
-    border-radius: 8px;
+    border-radius: variables.$radius;
   }
 
   h4 {
-    @include mixins.h4;
+    @include mixins.h3;
     max-width: 195px;
   }
 

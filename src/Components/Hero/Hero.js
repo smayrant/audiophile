@@ -5,10 +5,10 @@ function Hero() {
   return (
     <div className={classes.hero}>
       <div className={classes.hero_textContainer}>
-        <h6>new product</h6>
-        <h1>
+        <h5>new product</h5>
+        <h2>
           xx99 mark ii <span>headphones</span>
-        </h1>
+        </h2>
         <p>
           Experience natural, lifelike audio and exceptional build quality made
           for the passionate music enthusiast.

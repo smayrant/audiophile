@@ -21,16 +21,15 @@
     @include mixins.center;
     text-align: center;
 
-    h6 {
+    h5 {
       @include mixins.newProduct;
       color: variables.$white;
       opacity: 0.5;
     }
 
-    h1 {
+    h2 {
       color: variables.$white;
-      text-transform: uppercase;
-      font-size: 2.5rem;
+      @include mixins.h2;
     }
 
     p {

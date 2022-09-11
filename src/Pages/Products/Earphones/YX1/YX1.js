@@ -40,7 +40,7 @@ function YX1() {
         addToCart={true}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
-      <h5 className={classes.yx1_inTheBox}>in the box</h5>
+      <h4 className={classes.yx1_inTheBox}>in the box</h4>
       <ul>
         <li>
           <InTheBoxItem qty={2} boxItem={"earphone unit"} />
@@ -64,7 +64,7 @@ function YX1() {
         img2={galleryImg2}
         img3={galleryImg3}
       />
-      <h5 className={classes.yx1_mayLike_heading}>you may also like</h5>
+      <h4 className={classes.yx1_mayLike_heading}>you may also like</h4>
       <SeeProduct
         imgSrc={mayLikeImg2}
         imgAlt={"XX99 Mark I Headphones"}
