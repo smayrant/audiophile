@@ -2,7 +2,10 @@
 
 .summaryItem {
   &_container {
-    display: flex;
+    display: grid;
+    // grid-gap: 1rem;
+    align-items: center;
+    grid-template-columns: 5.4rem auto;
 
     img {
       border-radius: variables.$radius;
@@ -13,11 +16,27 @@
 
   &_infoContainer {
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
   }
 
   &_info {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &_qty,
+  &_price {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+    color: variables.$black;
+    opacity: 0.5;
+  }
+
+  &_title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
   }
 }

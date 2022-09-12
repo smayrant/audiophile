@@ -8,11 +8,11 @@ function SummaryItem() {
         <img src={zx7} alt="" />
         <div className={classes.summaryItem_infoContainer}>
           <div className={classes.summaryItem_info}>
-            <span>xx99 MK II</span>
-            <span>$2,999</span>
+            <span className={classes.summaryItem_title}>xx99 MK II</span>
+            <span className={classes.summaryItem_qty}>x1</span>
           </div>
           <div>
-            <span>x1</span>
+            <span className={classes.summaryItem_price}>$2,999</span>
           </div>
         </div>
       </div>

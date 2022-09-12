@@ -6,6 +6,7 @@ function Summary() {
     <div className={classes.summary}>
       <h5>summary</h5>
       <SummaryItem />
+      <div></div>
     </div>
   );
 }
