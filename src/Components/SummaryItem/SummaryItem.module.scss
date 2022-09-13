@@ -1,9 +1,9 @@
 @use "../../Styles/variables.scss";
 
 .summaryItem {
+  margin-bottom: 1.5rem;
   &_container {
     display: grid;
-    // grid-gap: 1rem;
     align-items: center;
     grid-template-columns: 5.4rem auto;
 

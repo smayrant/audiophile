@@ -5,7 +5,7 @@ function SummaryItem() {
   return (
     <div className={classes.summaryItem}>
       <div className={classes.summaryItem_container}>
-        <img src={zx7} alt="" />
+        <img src={zx7} alt="Cart item icon" />
         <div className={classes.summaryItem_infoContainer}>
           <div className={classes.summaryItem_info}>
             <span className={classes.summaryItem_title}>xx99 MK II</span>

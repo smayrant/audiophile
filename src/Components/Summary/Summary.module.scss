@@ -1,11 +1,49 @@
 @use "../../Styles/mixins.scss";
+@use "../../Styles/variables.scss";
 
 .summary {
   @include mixins.center;
   margin-left: 24px;
   margin-right: 24px;
+  margin-top: 4rem;
 
   h5 {
     @include mixins.h5;
+  }
+
+  table {
+    margin-top: 2rem;
+    width: 100%;
+  }
+
+  &_checkoutKey {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+    opacity: 0.5;
+  }
+
+  &_checkoutValue {
+    @include mixins.checkoutValue;
+  }
+
+  &_checkoutTotalValue {
+    @include mixins.checkoutValue;
+    color: variables.$light-brown;
+  }
+
+  &_checkoutTotal {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  &_checkoutSpacer {
+    height: 1.3rem;
+  }
+
+  button {
+    @include mixins.orangeButton;
+    width: 100%;
   }
 }

@@ -129,3 +129,11 @@
   border: 1px solid variables.$inputBorder;
   border-radius: variables.$radius;
 }
+
+@mixin checkoutValue {
+  text-align: right;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 25px;
+  text-transform: uppercase;
+}
