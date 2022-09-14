@@ -1,0 +1,91 @@
+@use "../../Styles/variables.scss";
+@use "../../Styles/mixins.scss";
+
+.cartModal {
+  position: fixed;
+  top: 24vh;
+  width: 70%;
+  z-index: 100;
+  overflow: hidden;
+  background-color: variables.$white;
+  border-radius: variables.$radius;
+  padding: 2rem;
+  left: 50%;
+  transform: translate(-50%);
+  max-width: 377px;
+
+  &_backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.75);
+  }
+
+  &_headingContainer {
+    display: flex;
+    justify-content: space-between;
+
+    h5 {
+      @include mixins.h5;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      text-decoration: underline;
+      font-weight: 500;
+      font-size: 15px;
+      line-height: 25px;
+      opacity: 0.5;
+      color: variables.$black;
+    }
+  }
+
+  &_cartItem_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &_cartItem {
+    display: flex;
+    align-items: center;
+
+    img {
+      border-radius: variables.$radius;
+      max-width: 64px;
+      margin-right: 1rem;
+    }
+  }
+
+  &_title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    color: variables.$black;
+  }
+
+  &_price {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+    color: variables.$black;
+    opacity: 0.5;
+  }
+
+  &_qtUp,
+  &_qtDown {
+    @include mixins.qtyButtons;
+    padding: 0.7rem 1rem;
+  }
+
+  &_qt {
+    @include mixins.qty;
+    padding: 0.7rem 0;
+  }
+}

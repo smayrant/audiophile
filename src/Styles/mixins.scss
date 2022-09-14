@@ -95,7 +95,7 @@
 
 // mixin for the increase and decrease quantity buttons as well as the quantity itself
 @mixin qtyButtons {
-  background-color: variables.$light-grey;
+  background-color: variables.$grey;
   color: rgba(0, 0, 0, 0.25);
   font-size: 13px;
   line-height: 18px;
@@ -103,7 +103,7 @@
 }
 
 @mixin qty {
-  background-color: variables.$light-grey;
+  background-color: variables.$grey;
   color: variables.$black;
   font-weight: 700;
   font-size: 13px;

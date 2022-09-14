@@ -11,16 +11,22 @@ function CartModal() {
           <h5>cart (1)</h5>
           <button>Remove all</button>
         </div>
-        <div>
-          <img src={zx7} alt="Cart item icon" />
-          <div className={classes.cartModal_infoContainer}>
-            <div className={classes.cartModal_info}>
-              <span className={classes.cartModal_title}>xx99 MK II</span>
-              <span className={classes.cartModal_qty}>x1</span>
+        <div className={classes.cartModal_cartItem_container}>
+          <div className={classes.cartModal_cartItem}>
+            <img src={zx7} alt="Cart item icon" />
+            <div className={classes.cartModal_infoContainer}>
+              <div className={classes.cartModal_info}>
+                <span className={classes.cartModal_title}>xx99 MK II</span>
+              </div>
+              <div>
+                <span className={classes.cartModal_price}>$2,999</span>
+              </div>
             </div>
-            <div>
-              <span className={classes.cartModal_price}>$2,999</span>
-            </div>
+          </div>
+          <div className={classes.cartModal_qtContainer}>
+            <span className={classes.cartModal_qtDown}>-</span>
+            <span className={classes.cartModal_qt}>1</span>
+            <span className={classes.cartModal_qtUp}>+</span>
           </div>
         </div>
       </div>
