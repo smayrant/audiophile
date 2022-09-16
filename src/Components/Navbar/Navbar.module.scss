@@ -11,5 +11,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    button {
+      border: none;
+      background: none;
+      cursor: pointer;
+    }
+  }
+
+  &_menuOpen {
+    display: block;
+  }
+
+  &_menuClosed {
+    display: none;
+  }
+
+  &_cartOpen {
+    display: block;
+  }
+
+  &_cartClosed {
+    display: none;
   }
 }

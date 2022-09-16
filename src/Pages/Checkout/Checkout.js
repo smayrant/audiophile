@@ -3,14 +3,12 @@ import Navbar from "../../Components/Navbar/Navbar";
 import GoBackButton from "../../Components/GoBackButton/GoBackButton";
 import { Fragment } from "react";
 import Summary from "../../Components/Summary/Summary";
-import CartModal from "../../Components/CartModal/CartModal";
 
 function Checkout() {
   return (
     <Fragment>
       <Navbar />
       <GoBackButton />
-      <CartModal />
       <div className={classes.checkout}>
         <h3>checkout</h3>
 

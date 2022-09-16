@@ -14,9 +14,9 @@ function ProductDetailSm(props) {
       {props.addToCart && (
         <div className={classes.productDetailSm_purchaseContainer}>
           <div className={classes.productDetailSm_qtContainer}>
-            <span className={classes.productDetailSm_qtDown}>-</span>
+            <button className={classes.productDetailSm_qtDown}>-</button>
             <span className={classes.productDetailSm_qt}>1</span>
-            <span className={classes.productDetailSm_qtUp}>+</span>
+            <button className={classes.productDetailSm_qtUp}>+</button>
           </div>
           <button id={classes.productDetailSm_addToCart}>add to cart</button>
         </div>

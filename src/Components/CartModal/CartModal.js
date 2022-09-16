@@ -2,11 +2,24 @@ import { Fragment } from "react";
 import classes from "./CartModal.module.scss";
 import zx7 from "../../Assets/Images/zx7-cart.jpg";
 
-function CartModal() {
+function CartModal(props) {
   return (
     <Fragment>
-      <div className={classes.cartModal_backdrop}></div>
+      <div
+        onClick={() => {
+          props.setCartState(false);
+        }}
+        className={classes.cartModal_backdrop}
+      ></div>
       <div className={classes.cartModal}>
+        <button
+          onClick={() => {
+            props.setCartState(false);
+          }}
+          className={classes.cartModal_closeBtn}
+        >
+          X
+        </button>
         <div className={classes.cartModal_headingContainer}>
           <h5>cart (1)</h5>
           <button>Remove all</button>
@@ -24,11 +37,16 @@ function CartModal() {
             </div>
           </div>
           <div className={classes.cartModal_qtContainer}>
-            <span className={classes.cartModal_qtDown}>-</span>
+            <button className={classes.cartModal_qtDown}>-</button>
             <span className={classes.cartModal_qt}>1</span>
-            <span className={classes.cartModal_qtUp}>+</span>
+            <button className={classes.cartModal_qtUp}>+</button>
           </div>
         </div>
+        <div className={classes.cartModal_totalContainer}>
+          <span className={classes.cartModal_total}>total</span>
+          <span className={classes.cartModal_totalPrice}>$5,396</span>
+        </div>
+        <button className={classes.cartModal_checkoutBtn}>checkout</button>
       </div>
     </Fragment>
   );

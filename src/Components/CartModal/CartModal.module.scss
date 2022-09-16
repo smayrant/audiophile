@@ -3,7 +3,7 @@
 
 .cartModal {
   position: fixed;
-  top: 24vh;
+  top: 114px;
   width: 70%;
   z-index: 100;
   overflow: hidden;
@@ -87,5 +87,31 @@
   &_qt {
     @include mixins.qty;
     padding: 0.7rem 0;
+  }
+
+  &_totalContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+  }
+
+  &_total {
+    color: variables.$black;
+    opacity: 0.5;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 25px;
+    text-transform: uppercase;
+  }
+
+  &_totalPrice {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &_checkoutBtn {
+    @include mixins.orangeButton;
+    width: 100%;
   }
 }
