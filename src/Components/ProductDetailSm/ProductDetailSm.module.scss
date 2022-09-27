@@ -32,6 +32,7 @@
   &_qtDown {
     @include mixins.qtyButtons;
     padding: 1.016rem 1.568rem;
+    margin-top: 0;
   }
 
   &_qt {
@@ -52,7 +53,7 @@
     border-radius: variables.$radius;
   }
 
-  h4 {
+  h3 {
     @include mixins.h3;
     max-width: 195px;
   }
@@ -69,11 +70,17 @@
     mix-blend-mode: normal;
   }
 
-  button {
+  &_seeProduct__btn {
     @include mixins.orangeButton;
   }
 }
 
 #productDetailSm_addToCart {
+  @include mixins.orangeButton;
   margin-top: 0;
+}
+
+// class that's conditionally added to the product's heading to center the text
+.centerText {
+  margin: 0 auto;
 }

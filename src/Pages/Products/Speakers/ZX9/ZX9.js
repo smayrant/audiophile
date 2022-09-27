@@ -16,6 +16,7 @@ import galleryImg3 from "../../../../Assets/Images/zx9-gallery-3-mobile.jpg";
 import mayLikeImg1 from "../../../../Assets/Images/zx7-mayLike-mobile.jpg";
 import mayLikeImg2 from "../../../../Assets/Images/xx99-mayLike-mobile.jpg";
 import mayLikeImg3 from "../../../../Assets/Images/xx59-mayLike-mobile.jpg";
+import cartImg from "../../../../Assets/Images/zx9-cart.jpg";
 
 function ZX9() {
   const zx9Text =
@@ -36,8 +37,11 @@ function ZX9() {
         title={"zx9 speaker"}
         text={zx9Text}
         seeProduct={false}
-        price={"$4,500"}
+        price={4500}
         addToCart={true}
+        id={4}
+        name={"zx9"}
+        cartImg={cartImg}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
       <h4 className={classes.zx9_inTheBox}>in the box</h4>

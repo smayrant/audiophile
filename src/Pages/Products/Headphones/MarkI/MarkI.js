@@ -16,6 +16,7 @@ import galleryImg3 from "../../../../Assets/Images/mark1-gallery-3-mobile.jpg";
 import mayLikeImg1 from "../../../../Assets/Images/xx99ii-mayLike-mobile.jpg";
 import mayLikeImg2 from "../../../../Assets/Images/xx59-mayLike-mobile.jpg";
 import mayLikeImg3 from "../../../../Assets/Images/zx9-mayLike-mobile.jpg";
+import cartImg from "../../../../Assets/Images/xx99-cart.jpg";
 
 function MarkI() {
   const mark1Text =
@@ -36,11 +37,14 @@ function MarkI() {
         title={"xx99 marki headphones"}
         text={mark1Text}
         seeProduct={false}
-        price={"$1,750"}
+        price={parseInt("1750")}
         addToCart={true}
+        id={1}
+        name={"xx99 mk i"}
+        cartImg={cartImg}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
-      <h4 className={classes.markII_inTheBox}>in the box</h4>
+      <h4 className={classes.markI_inTheBox}>in the box</h4>
       <ul>
         <li>
           <InTheBoxItem qty={1} boxItem={"headphone unit"} />

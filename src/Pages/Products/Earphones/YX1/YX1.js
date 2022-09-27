@@ -16,6 +16,7 @@ import galleryImg3 from "../../../../Assets/Images/yx1-gallery-3-mobile.jpg";
 import mayLikeImg1 from "../../../../Assets/Images/zx9-mayLike-mobile.jpg";
 import mayLikeImg2 from "../../../../Assets/Images/xx99-mayLike-mobile.jpg";
 import mayLikeImg3 from "../../../../Assets/Images/xx59-mayLike-mobile.jpg";
+import cartImg from "../../../../Assets/Images/yx1-cart.jpg";
 
 function YX1() {
   const yx1Text =
@@ -36,8 +37,11 @@ function YX1() {
         title={"yx1 speaker"}
         text={yx1Text}
         seeProduct={false}
-        price={"$599"}
+        price={599}
         addToCart={true}
+        id={6}
+        name={"yx1"}
+        cartImg={cartImg}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
       <h4 className={classes.yx1_inTheBox}>in the box</h4>

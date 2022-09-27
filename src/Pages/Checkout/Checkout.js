@@ -16,7 +16,7 @@ function Checkout() {
           <fieldset>
             <legend>billing details</legend>
             <div className={classes.checkout_inputContainer}>
-              <label className={classes.checkout_label} for="name">
+              <label className={classes.checkout_label} htmlFor="name">
                 Name
               </label>
               <input
@@ -27,7 +27,7 @@ function Checkout() {
               />
             </div>
             <div className={classes.checkout_inputContainer}>
-              <label className={classes.checkout_label} for="email">
+              <label className={classes.checkout_label} htmlFor="email">
                 Email Address
               </label>
               <input
@@ -38,7 +38,7 @@ function Checkout() {
               />
             </div>
             <div className={classes.checkout_inputContainer}>
-              <label className={classes.checkout_label} for="phone number">
+              <label className={classes.checkout_label} htmlFor="phone number">
                 Phone Number
               </label>
               <input
@@ -47,7 +47,7 @@ function Checkout() {
                 pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 name="phone number"
                 placeholder="+1 202-555-0136"
-                maxlength="12"
+                maxLength="12"
               />
             </div>
           </fieldset>
@@ -55,7 +55,7 @@ function Checkout() {
           <fieldset>
             <legend>shipping info</legend>
             <div className={classes.checkout_inputContainer}>
-              <label className={classes.checkout_label} for="address">
+              <label className={classes.checkout_label} htmlFor="address">
                 Your Address
               </label>
 
@@ -67,7 +67,7 @@ function Checkout() {
               />
             </div>
             <div className={classes.checkout_inputContainer}>
-              <label className={classes.checkout_label} for="zip">
+              <label className={classes.checkout_label} htmlFor="zip">
                 Zip Code
               </label>
 
@@ -80,7 +80,7 @@ function Checkout() {
               />
             </div>
             <div className={classes.checkout_inputContainer}>
-              <label className={classes.checkout_label} for="city">
+              <label className={classes.checkout_label} htmlFor="city">
                 City
               </label>
 
@@ -92,7 +92,7 @@ function Checkout() {
               />
             </div>
             <div className={classes.checkout_inputContainer}>
-              <label className={classes.checkout_label} for="country">
+              <label className={classes.checkout_label} htmlFor="country">
                 Country
               </label>
 
@@ -109,14 +109,26 @@ function Checkout() {
             <span className={classes.checkout_label}>Payment Method</span>
             <div>
               <div className={classes.checkout_radioContainer}>
-                <label className={classes.checkout_paymentLabel} for="e-money">
-                  <input type="radio" value="e-Money" checked />
+                <label
+                  className={classes.checkout_paymentLabel}
+                  htmlFor="e-money"
+                >
+                  <input
+                    type="radio"
+                    value="e-Money"
+                    defaultChecked
+                    name="radioButton"
+                  />
                   <span>e-Money</span>
                 </label>
               </div>
               <div className={classes.checkout_radioContainer}>
-                <label className={classes.checkout_paymentLabel} for="cod">
-                  <input type="radio" value="Cash on Delivery" />
+                <label className={classes.checkout_paymentLabel} htmlFor="cod">
+                  <input
+                    type="radio"
+                    value="Cash on Delivery"
+                    name="radioButton"
+                  />
                   <span>Cash on Delivery</span>
                 </label>
               </div>
@@ -124,7 +136,7 @@ function Checkout() {
             <div>
               <label
                 className={classes.checkout_inputContainer}
-                for="e-moneyNumber"
+                htmlFor="e-moneyNumber"
               >
                 <span className={classes.checkout_label}>e-Money Number</span>
                 <input
@@ -135,7 +147,7 @@ function Checkout() {
               </label>
               <label
                 className={classes.checkout_inputContainer}
-                for="e-moneyPin"
+                htmlFor="e-moneyPin"
               >
                 <span className={classes.checkout_label}>e-Money Pin</span>
                 <input

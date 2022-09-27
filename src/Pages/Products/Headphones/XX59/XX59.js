@@ -16,6 +16,7 @@ import galleryImg3 from "../../../../Assets/Images/xx59-gallery-3-mobile.jpg";
 import mayLikeImg1 from "../../../../Assets/Images/xx99ii-mayLike-mobile.jpg";
 import mayLikeImg2 from "../../../../Assets/Images/xx99-mayLike-mobile.jpg";
 import mayLikeImg3 from "../../../../Assets/Images/zx9-mayLike-mobile.jpg";
+import cartImg from "../../../../Assets/Images/xx59-cart.jpg";
 
 function XX59() {
   const xx59Text =
@@ -36,8 +37,11 @@ function XX59() {
         title={"xx59 headphones"}
         text={xx59Text}
         seeProduct={false}
-        price={"$899"}
+        price={899}
         addToCart={true}
+        id={3}
+        name={"xx59"}
+        cartImg={cartImg}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
       <h4 className={classes.xx59_inTheBox}>in the box</h4>

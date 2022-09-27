@@ -16,6 +16,7 @@ import galleryImg3 from "../../../../Assets/Images/zx7-gallery-3-mobile.jpg";
 import mayLikeImg1 from "../../../../Assets/Images/zx9-mayLike-mobile.jpg";
 import mayLikeImg2 from "../../../../Assets/Images/xx99-mayLike-mobile.jpg";
 import mayLikeImg3 from "../../../../Assets/Images/xx59-mayLike-mobile.jpg";
+import cartImg from "../../../../Assets/Images/zx7-cart.jpg";
 
 function ZX7() {
   const zx7Text =
@@ -36,8 +37,11 @@ function ZX7() {
         title={"zx7 speaker"}
         text={zx7Text}
         seeProduct={false}
-        price={"$3,500"}
+        price={3500}
         addToCart={true}
+        id={5}
+        name={"zx7"}
+        cartImg={cartImg}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
       <h4 className={classes.zx7_inTheBox}>in the box</h4>

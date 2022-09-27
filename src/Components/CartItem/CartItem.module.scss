@@ -1,0 +1,46 @@
+@use "../../Styles/variables.scss";
+@use "../../Styles/mixins.scss";
+
+.cartItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_cartItem {
+    display: flex;
+    align-items: center;
+
+    img {
+      border-radius: variables.$radius;
+      max-width: 64px;
+      margin-right: 1rem;
+    }
+  }
+
+  &_title {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 25px;
+    color: variables.$black;
+    text-transform: uppercase;
+  }
+
+  &_price {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 25px;
+    color: variables.$black;
+    opacity: 0.5;
+  }
+
+  &_qtUp,
+  &_qtDown {
+    @include mixins.qtyButtons;
+    padding: 0.7rem 1rem;
+  }
+
+  &_qt {
+    @include mixins.qty;
+    padding: 0.7rem 0;
+  }
+}

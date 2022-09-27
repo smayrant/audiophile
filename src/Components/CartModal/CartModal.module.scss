@@ -24,6 +24,20 @@
     background: rgba(0, 0, 0, 0.75);
   }
 
+  &_closeBtn {
+    background: none;
+    border: none;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
+  &_emptyMsg {
+    color: variables.$black;
+    opacity: 0.5;
+    text-align: center;
+    font-size: 1.15rem;
+  }
+
   &_headingContainer {
     display: flex;
     justify-content: space-between;
@@ -44,49 +58,6 @@
       opacity: 0.5;
       color: variables.$black;
     }
-  }
-
-  &_cartItem_container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-
-  &_cartItem {
-    display: flex;
-    align-items: center;
-
-    img {
-      border-radius: variables.$radius;
-      max-width: 64px;
-      margin-right: 1rem;
-    }
-  }
-
-  &_title {
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 25px;
-    color: variables.$black;
-  }
-
-  &_price {
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 25px;
-    color: variables.$black;
-    opacity: 0.5;
-  }
-
-  &_qtUp,
-  &_qtDown {
-    @include mixins.qtyButtons;
-    padding: 0.7rem 1rem;
-  }
-
-  &_qt {
-    @include mixins.qty;
-    padding: 0.7rem 0;
   }
 
   &_totalContainer {

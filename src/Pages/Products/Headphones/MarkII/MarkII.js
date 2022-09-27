@@ -16,6 +16,7 @@ import galleryImg3 from "../../../../Assets/Images/mark2-gallery-3-mobile.jpg";
 import mayLikeImg1 from "../../../../Assets/Images/xx99-mayLike-mobile.jpg";
 import mayLikeImg2 from "../../../../Assets/Images/xx59-mayLike-mobile.jpg";
 import mayLikeImg3 from "../../../../Assets/Images/zx9-mayLike-mobile.jpg";
+import cartImg from "../../../../Assets/Images/xx99ii-cart.jpg";
 
 function MarkII() {
   const mark2Text =
@@ -36,8 +37,11 @@ function MarkII() {
         title={"xx99 markii headphones"}
         text={mark2Text}
         seeProduct={false}
-        price={"$2,999"}
+        price={2999}
         addToCart={true}
+        id={2}
+        name={"xx99 mk ii"}
+        cartImg={cartImg}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
       <h4 className={classes.markII_inTheBox}>in the box</h4>
