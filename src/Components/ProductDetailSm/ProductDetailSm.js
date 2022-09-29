@@ -5,7 +5,7 @@ import { useDispatch, useSelector } from "react-redux";
 function ProductDetailSm(props) {
   const dispatch = useDispatch();
 
-  const qtyToAdd = useSelector((state) => state.cart.qtyToAdd);
+  const qtyToAdd = useSelector((state) => state.qtyToAdd);
 
   const { name, id, price, imgSrc, cartImg, quantity } = props;
 

@@ -5,11 +5,11 @@ import { Fragment } from "react";
 import { useSelector } from "react-redux";
 
 function Summary() {
-  const cartTotal = useSelector((state) => state.cart.cartTotal);
-  const cartItems = useSelector((state) => state.cart.items);
-
+  const cartTotal = useSelector((state) => state.cartTotal);
+  const cartItems = useSelector((state) => state.items);
   const shipping = 50;
   const vat = cartItems.length < 1 ? 0 : cartTotal * 0.2;
+  const checkoutTotal = cartTotal + shipping + vat;
   return (
     <Fragment>
       <div className={classes.summary}>
@@ -39,16 +39,18 @@ function Summary() {
             </tr>
             <tr>
               <td className={classes.summary_checkoutKey}>vat (included)</td>
-              <td className={classes.summary_checkoutValue}>{`$${vat}`}</td>
+              <td className={classes.summary_checkoutValue}>{`$${vat.toFixed(
+                2
+              )}`}</td>
             </tr>
           </tbody>
           <tfoot>
             <tr className={classes.summary_checkoutSpacer}></tr>
             <tr className={classes.summary_checkoutTotal}>
               <td className={classes.summary_checkoutKey}>grand total</td>
-              <td className={classes.summary_checkoutTotalValue}>{`$${
-                cartTotal + shipping + vat
-              }`}</td>
+              <td
+                className={classes.summary_checkoutTotalValue}
+              >{`$${checkoutTotal.toFixed(2)}`}</td>
             </tr>
           </tfoot>
         </table>

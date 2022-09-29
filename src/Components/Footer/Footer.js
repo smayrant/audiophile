@@ -3,6 +3,7 @@ import classes from "./Footer.module.scss";
 import facebook from "../../Assets/Images/facebook.svg";
 import twitter from "../../Assets/Images/twitter.svg";
 import instagram from "../../Assets/Images/instagram.svg";
+import { Link } from "react-router-dom";
 
 function Footer() {
   return (
@@ -11,10 +12,18 @@ function Footer() {
         <img src={logo} alt="Logo" />
         <nav>
           <ul className={classes.footer_links}>
-            <li>home</li>
-            <li>headphones</li>
-            <li>speakers</li>
-            <li>earphones</li>
+            <Link to="/">
+              <li>home</li>
+            </Link>
+            <Link to="/headphones">
+              <li>headphones</li>
+            </Link>
+            <Link to="/speakers">
+              <li>speakers</li>
+            </Link>
+            <Link to="/earphones">
+              <li>earphones</li>
+            </Link>
           </ul>
         </nav>
         <p className={classes.footer_text}>

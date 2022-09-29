@@ -5,9 +5,9 @@ import { cartActions } from "../../store/cart-slice";
 import CartItem from "../CartItem/CartItem";
 
 function CartModal(props) {
-  const cartItems = useSelector((state) => state.cart.items);
-  const totalQty = useSelector((state) => state.cart.totalQuantity);
-  const cartTotal = useSelector((state) => state.cart.cartTotal);
+  const cartItems = useSelector((state) => state.items);
+  const totalQty = useSelector((state) => state.totalQuantity);
+  const cartTotal = useSelector((state) => state.cartTotal);
 
   const dispatch = useDispatch();
 

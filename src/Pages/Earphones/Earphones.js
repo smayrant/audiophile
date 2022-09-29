@@ -13,12 +13,12 @@ function Earphones() {
   return (
     <div>
       <Navbar />
-      <Heading title={"speakers"} />
+      <Heading title={"earphones"} />
       <div className={classes.productDetailSm_container}>
         <ProductDetailSm
           newProduct={true}
           imgSrc={img}
-          title={"zx9 speaker"}
+          title={"yx1 wireless earphones"}
           text={text}
           seeProduct={true}
           addToCart={false}

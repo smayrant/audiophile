@@ -34,7 +34,7 @@ function YX1() {
       <ProductDetailSm
         newProduct={true}
         imgSrc={yx1Img}
-        title={"yx1 speaker"}
+        title={"yx1 earphones"}
         text={yx1Text}
         seeProduct={false}
         price={599}
