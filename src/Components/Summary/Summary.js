@@ -1,15 +1,22 @@
 import classes from "./Summary.module.scss";
 import SummaryItem from "../SummaryItem/SummaryItem";
 import Footer from "../Footer/Footer";
-import { Fragment } from "react";
+import { Fragment, useState } from "react";
 import { useSelector } from "react-redux";
+import OrderConfirmation from "../OrderConfirmation/OrderConfirmation";
 
 function Summary() {
-  const cartTotal = useSelector((state) => state.cartTotal);
-  const cartItems = useSelector((state) => state.items);
+  const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
+
+  const handleClick = () => {
+    setIsOrderConfirmed(true);
+  };
+
+  const cartTotal = useSelector((state) => state.cart.cartTotal);
+  const cartItems = useSelector((state) => state.cart.items);
   const shipping = 50;
   const vat = cartItems.length < 1 ? 0 : cartTotal * 0.2;
-  const checkoutTotal = cartTotal + shipping + vat;
+  const grandTotal = cartTotal + shipping + vat;
   return (
     <Fragment>
       <div className={classes.summary}>
@@ -50,11 +57,14 @@ function Summary() {
               <td className={classes.summary_checkoutKey}>grand total</td>
               <td
                 className={classes.summary_checkoutTotalValue}
-              >{`$${checkoutTotal.toFixed(2)}`}</td>
+              >{`$${grandTotal.toFixed(2)}`}</td>
             </tr>
           </tfoot>
         </table>
-        <button>continue & pay</button>
+        <button className={classes.summary_button} onClick={handleClick}>
+          continue & pay
+        </button>
+        {isOrderConfirmed && <OrderConfirmation grandTotal={grandTotal} />}
       </div>
       <Footer />
     </Fragment>

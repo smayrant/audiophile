@@ -1,6 +1,6 @@
 import classes from "./Checkout.module.scss";
 import Navbar from "../../Components/Navbar/Navbar";
-import GoBackButton from "../../Components/GoBackButton/GoBackButton";
+import GoBackButton from "../../Components/UI/GoBackButton/GoBackButton";
 import { Fragment } from "react";
 import Summary from "../../Components/Summary/Summary";
 

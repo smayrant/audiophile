@@ -42,7 +42,7 @@
     height: 1.3rem;
   }
 
-  button {
+  &_button {
     @include mixins.orangeButton;
     width: 100%;
   }

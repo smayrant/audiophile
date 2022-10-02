@@ -7,6 +7,7 @@ const cartSlice = createSlice({
     cartTotal: 0,
     totalQuantity: 0,
     qtyToAdd: 1,
+    grandTotal: 0,
   },
   reducers: {
     increaseQty(state) {

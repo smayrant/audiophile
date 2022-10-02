@@ -2,7 +2,7 @@ import ProductDetailSm from "../../../../Components/ProductDetailSm/ProductDetai
 import xx59Img from "../../../../Assets/Images/category-page-xx59-mobile.jpg";
 import Navbar from "../../../../Components/Navbar/Navbar";
 import classes from "./XX59.module.scss";
-import GoBackButton from "../../../../Components/GoBackButton/GoBackButton";
+import GoBackButton from "../../../../Components/UI/GoBackButton/GoBackButton";
 import Features from "../../../../Components/Features/Features";
 import InTheBoxItem from "../../../../Components/InTheBoxItem/InTheBoxItem";
 import PictureContainer from "../../../../Components/PictureContainer/PictureContainer";
@@ -70,16 +70,19 @@ function XX59() {
         imgSrc={mayLikeImg1}
         imgAlt={"XX99 Mark I Headphones"}
         title={"xx99 mark ii"}
+        seeProductLink={"/products/mark-ii-headphones"}
       />
       <SeeProduct
         imgSrc={mayLikeImg2}
-        imgAlt={"XX59 Headphones"}
-        title={"xx59"}
+        imgAlt={"XX99 Mark I Headphones"}
+        title={"xx99 mark i"}
+        seeProductLink={"/products/mark-i-headphones"}
       />
       <SeeProduct
         imgSrc={mayLikeImg3}
         imgAlt={"ZX9 Speaker"}
         title={"zx9 speaker"}
+        seeProductLink={"/products/zx9-speaker"}
       />
       <ShopProductContainer />
       <BestGear />

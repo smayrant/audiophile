@@ -2,7 +2,7 @@ import ProductDetailSm from "../../../../Components/ProductDetailSm/ProductDetai
 import mark1Img from "../../../../Assets/Images/category-page-xx991-mobile.jpg";
 import Navbar from "../../../../Components/Navbar/Navbar";
 import classes from "./MarkI.module.scss";
-import GoBackButton from "../../../../Components/GoBackButton/GoBackButton";
+import GoBackButton from "../../../../Components/UI/GoBackButton/GoBackButton";
 import Features from "../../../../Components/Features/Features";
 import InTheBoxItem from "../../../../Components/InTheBoxItem/InTheBoxItem";
 import PictureContainer from "../../../../Components/PictureContainer/PictureContainer";
@@ -69,16 +69,19 @@ function MarkI() {
         imgSrc={mayLikeImg1}
         imgAlt={"XX99 Mark II Headphones"}
         title={"xx99 mark ii"}
+        seeProductLink={"/products/mark-ii-headphones"}
       />
       <SeeProduct
         imgSrc={mayLikeImg2}
         imgAlt={"XX59 Headphones"}
         title={"xx59"}
+        seeProductLink={"/products/xx59-headphones"}
       />
       <SeeProduct
         imgSrc={mayLikeImg3}
         imgAlt={"ZX9 Speaker"}
         title={"zx9 speaker"}
+        seeProductLink={"/products/zx9-speaker"}
       />
       <ShopProductContainer />
       <BestGear />

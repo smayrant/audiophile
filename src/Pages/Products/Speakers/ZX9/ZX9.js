@@ -2,7 +2,7 @@ import ProductDetailSm from "../../../../Components/ProductDetailSm/ProductDetai
 import zx9Img from "../../../../Assets/Images/category-page-zx9-mobile.jpg";
 import Navbar from "../../../../Components/Navbar/Navbar";
 import classes from "./ZX9.module.scss";
-import GoBackButton from "../../../../Components/GoBackButton/GoBackButton";
+import GoBackButton from "../../../../Components/UI/GoBackButton/GoBackButton";
 import Features from "../../../../Components/Features/Features";
 import InTheBoxItem from "../../../../Components/InTheBoxItem/InTheBoxItem";
 import PictureContainer from "../../../../Components/PictureContainer/PictureContainer";
@@ -73,16 +73,19 @@ function ZX9() {
         imgSrc={mayLikeImg1}
         imgAlt={"ZX7 Speaker"}
         title={"zx7 speaker"}
+        seeProductLink={"/products/zx7-speaker"}
       />
       <SeeProduct
         imgSrc={mayLikeImg2}
         imgAlt={"XX99 Mark I Headphones"}
         title={"xx99 mark i"}
+        seeProductLink={"/products/mark-i-headphones"}
       />
       <SeeProduct
         imgSrc={mayLikeImg3}
         imgAlt={"XX59 Headphones"}
         title={"xx59"}
+        seeProductLink={"/products/xx59-headphones"}
       />
       <ShopProductContainer />
       <BestGear />

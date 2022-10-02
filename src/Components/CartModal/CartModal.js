@@ -3,11 +3,13 @@ import { Fragment } from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { cartActions } from "../../store/cart-slice";
 import CartItem from "../CartItem/CartItem";
+import { Link } from "react-router-dom";
+import Backdrop from "../UI/Backdrop/Backdrop";
 
 function CartModal(props) {
-  const cartItems = useSelector((state) => state.items);
-  const totalQty = useSelector((state) => state.totalQuantity);
-  const cartTotal = useSelector((state) => state.cartTotal);
+  const cartItems = useSelector((state) => state.cart.items);
+  const totalQty = useSelector((state) => state.cart.totalQuantity);
+  const cartTotal = useSelector((state) => state.cart.cartTotal);
 
   const dispatch = useDispatch();
 
@@ -21,12 +23,7 @@ function CartModal(props) {
 
   return (
     <Fragment>
-      <div
-        onClick={() => {
-          props.setCartState(false);
-        }}
-        className={classes.cartModal_backdrop}
-      ></div>
+      <Backdrop />
       <div className={classes.cartModal}>
         <button
           onClick={toggleVisibility}
@@ -58,7 +55,11 @@ function CartModal(props) {
                 className={classes.cartModal_totalPrice}
               >{`$${cartTotal}`}</span>
             </div>
-            <button className={classes.cartModal_checkoutBtn}>checkout</button>
+            <Link to={"/checkout"}>
+              <button className={classes.cartModal_checkoutBtn}>
+                checkout
+              </button>
+            </Link>
           </div>
         ) : (
           <p className={classes.cartModal_emptyMsg}>Your cart is empty!</p>

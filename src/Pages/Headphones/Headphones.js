@@ -31,6 +31,7 @@ function Headphones() {
           text={mark2Text}
           seeProduct={true}
           addToCart={false}
+          seeProductLink={"/products/mark-ii-headphones"}
         />
       </div>
       <div className={classes.productDetailSm_container}>
@@ -41,6 +42,7 @@ function Headphones() {
           text={mark1Text}
           seeProduct={true}
           addToCart={false}
+          seeProductLink={"/products/mark-i-headphones"}
         />
       </div>
       <div className={classes.productDetailSm_container}>
@@ -51,6 +53,7 @@ function Headphones() {
           text={xx59Text}
           seeProduct={true}
           addToCart={false}
+          seeProductLink={"/products/xx59-headphones"}
         />
       </div>
       <ShopProductContainer />

@@ -22,6 +22,7 @@ function Earphones() {
           text={text}
           seeProduct={true}
           addToCart={false}
+          seeProductLink={"/products/yx1-earphones"}
         />
       </div>
 

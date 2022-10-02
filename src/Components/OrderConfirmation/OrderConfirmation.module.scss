@@ -1,0 +1,91 @@
+@use "../../Styles/variables.scss";
+@use "../../Styles/mixins.scss";
+
+.orderConfirmation {
+  @include mixins.modal;
+
+  &_headerContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  &_closeButton {
+    @include mixins.closeButton;
+  }
+
+  h4 {
+    @include mixins.h4;
+  }
+
+  p {
+    @include mixins.text;
+    color: variables.$black;
+    opacity: 0.5;
+  }
+
+  &_orderInfo {
+    background-color: variables.$grey;
+    border-radius: variables.$radius;
+    padding: 0.8rem;
+  }
+
+  &_itemContainer {
+    padding-right: 1rem;
+
+    hr {
+      background-color: variables.$black;
+      opacity: 0.08;
+      border: 0;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    }
+  }
+
+  &_btnContainer {
+    text-align: center;
+  }
+
+  &_toggleItemsBtn {
+    @include mixins.text;
+    color: variables.$black;
+    opacity: 0.5;
+    font-weight: 700;
+    font-size: 12px;
+    background: none;
+    border: none;
+    margin: 0 auto;
+  }
+
+  &_totalContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: variables.$black;
+    padding-left: 1.5rem;
+    padding-top: 1rem;
+    padding-bottom: 1.6rem;
+    border-radius: 0 0 variables.$radius variables.$radius;
+  }
+
+  &_grandTotal__text {
+    color: variables.$white;
+    opacity: 0.5;
+    @include mixins.text;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  &_grandTotal {
+    color: variables.$white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  &_otherCartItem__active {
+    display: block;
+  }
+
+  &_otherCartItem__inactive {
+    display: none;
+  }
+}

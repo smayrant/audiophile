@@ -6,6 +6,7 @@ import cart from "../../Assets/Images/cart.svg";
 import hamburger from "../../Assets/Images/hamburger.svg";
 import ShopProductContainer from "../ShopProductContainer/ShopProductContainer";
 import CartModal from "../CartModal/CartModal";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +23,9 @@ function Navbar() {
             >
               <img src={hamburger} alt="Hamburger menu icon" />
             </button>
-            <img src={logo} alt="Audiophile logo" />
+            <Link to="/">
+              <img src={logo} alt="Audiophile logo" />
+            </Link>
             <button
               onClick={() => {
                 setIsCartOpen(true);

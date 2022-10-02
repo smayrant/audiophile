@@ -1,5 +1,5 @@
-@use "../../Styles/mixins.scss";
-@use "../../Styles/variables.scss";
+@use "../../../Styles/mixins.scss";
+@use "../../../Styles/variables.scss";
 
 .goBackButton {
   @include mixins.center;

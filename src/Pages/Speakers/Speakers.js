@@ -27,6 +27,7 @@ function Speakers() {
           text={zx9Text}
           seeProduct={true}
           addToCart={false}
+          seeProductLink={"/products/zx9-speaker"}
         />
       </div>
       <div className={classes.productDetailSm_container}>
@@ -37,6 +38,7 @@ function Speakers() {
           text={zx7Text}
           seeProduct={true}
           addToCart={false}
+          seeProductLink={"/products/zx7-speaker"}
         />
       </div>
       <ShopProductContainer />

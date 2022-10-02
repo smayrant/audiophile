@@ -1,11 +1,12 @@
 import classes from "./ProductDetailSm.module.scss";
 import { cartActions } from "../../store/cart-slice";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
 
 function ProductDetailSm(props) {
   const dispatch = useDispatch();
 
-  const qtyToAdd = useSelector((state) => state.qtyToAdd);
+  const qtyToAdd = useSelector((state) => state.cart.qtyToAdd);
 
   const { name, id, price, imgSrc, cartImg, quantity } = props;
 
@@ -29,9 +30,11 @@ function ProductDetailSm(props) {
       </h3>
       <p>{props.text}</p>
       {props.seeProduct && (
-        <button className={classes.productDetailSm_seeProduct__btn}>
-          see product
-        </button>
+        <Link to={props.seeProductLink}>
+          <button className={classes.productDetailSm_seeProduct__btn}>
+            see product
+          </button>
+        </Link>
       )}
       {props.addToCart && (
         <span
