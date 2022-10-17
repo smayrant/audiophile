@@ -121,6 +121,13 @@
   letter-spacing: -0.21px;
 }
 
+@mixin inputError {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: variables.$inputError;
+}
+
 @mixin input {
   margin-top: 0.55rem;
   margin-bottom: 1.5rem;

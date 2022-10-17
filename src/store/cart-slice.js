@@ -7,7 +7,6 @@ const cartSlice = createSlice({
     cartTotal: 0,
     totalQuantity: 0,
     qtyToAdd: 1,
-    grandTotal: 0,
   },
   reducers: {
     increaseQty(state) {
@@ -40,17 +39,17 @@ const cartSlice = createSlice({
         // update the cart's total by multiplying the price of the item by the quantity to be added
         state.cartTotal += newItem.price * state.qtyToAdd;
       }
-      //   Otherwise, if the item is in the cart, update its quantity and the total and the total for the cart
+      //   Otherwise, if the item is in the cart, update its quantity and total and the total for the cart
       else {
         existingItem.quantity += state.qtyToAdd;
         existingItem.total += existingItem.total;
-        state.cartTotal = state.cartTotal + existingItem.price;
+        state.cartTotal = state.cartTotal + existingItem.price * state.qtyToAdd;
       }
       // reset the quantity of items to add to cart to 1
       state.qtyToAdd = 1;
     },
     removeItemFromCart(state, action) {
-      // only the item's id will be necessary to retrieve
+      // retrieve the item's id from payload
       const id = action.payload;
 
       // find items in state where id is equal to the id from the payload

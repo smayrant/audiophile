@@ -16,6 +16,9 @@
 
   &_closeBtn {
     @include mixins.closeButton;
+    position: absolute;
+    right: 0;
+    padding-right: 2rem;
   }
 
   &_emptyMsg {
@@ -28,6 +31,7 @@
   &_headingContainer {
     display: flex;
     justify-content: space-between;
+    margin-top: 1.25rem;
 
     h5 {
       @include mixins.h5;

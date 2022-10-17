@@ -13,12 +13,25 @@
     flex-direction: column;
   }
 
+  &_labelContainer {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_errorMessage {
+    @include mixins.inputError;
+  }
+
   &_label {
     @include mixins.inputLabel;
   }
 
   &_input {
     @include mixins.input;
+  }
+
+  .invalid {
+    border: 1px variables.$inputError solid;
   }
 
   &_radioContainer {
@@ -73,5 +86,54 @@
     letter-spacing: -0.25px;
     color: variables.$black;
     opacity: 0.4;
+  }
+
+  input:focus {
+    outline: 1.25px solid variables.$light-brown;
+  }
+
+  input[type="radio"]:after {
+    content: "";
+    position: relative;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: block;
+    visibility: visible;
+    border-radius: 50%;
+  }
+
+  input[type="radio"]:focus {
+    outline: 0;
+  }
+
+  input[type="radio"]:checked:after {
+    content: "";
+    position: relative;
+    width: 8px;
+    height: 8px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: variables.$light-brown;
+    display: block;
+    visibility: visible;
+    border-radius: 8px;
+    outline: none;
+  }
+
+  &_codContainer {
+    div {
+      text-align: center;
+    }
+
+    p {
+      @include mixins.text;
+      color: variables.$black;
+      opacity: 0.5;
+    }
   }
 }

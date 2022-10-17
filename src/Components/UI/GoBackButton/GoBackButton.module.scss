@@ -15,4 +15,10 @@
     margin-top: 1rem;
     margin-bottom: 1.5rem;
   }
+
+  button:hover {
+    color: variables.$light-brown;
+    text-decoration: underline;
+    transition: all 0.2s;
+  }
 }

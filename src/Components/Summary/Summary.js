@@ -1,17 +1,10 @@
 import classes from "./Summary.module.scss";
 import SummaryItem from "../SummaryItem/SummaryItem";
 import Footer from "../Footer/Footer";
-import { Fragment, useState } from "react";
+import { Fragment } from "react";
 import { useSelector } from "react-redux";
-import OrderConfirmation from "../OrderConfirmation/OrderConfirmation";
 
-function Summary() {
-  const [isOrderConfirmed, setIsOrderConfirmed] = useState(false);
-
-  const handleClick = () => {
-    setIsOrderConfirmed(true);
-  };
-
+function Summary(props) {
   const cartTotal = useSelector((state) => state.cart.cartTotal);
   const cartItems = useSelector((state) => state.cart.items);
   const shipping = 50;
@@ -61,10 +54,13 @@ function Summary() {
             </tr>
           </tfoot>
         </table>
-        <button className={classes.summary_button} onClick={handleClick}>
+        <button
+          className={classes.summary_button}
+          onClick={props.onClick}
+          type="submit"
+        >
           continue & pay
         </button>
-        {isOrderConfirmed && <OrderConfirmation grandTotal={grandTotal} />}
       </div>
       <Footer />
     </Fragment>

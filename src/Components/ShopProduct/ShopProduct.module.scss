@@ -4,6 +4,11 @@
   position: relative;
   margin-top: 5rem;
 
+  @media (min-width: 768px) {
+    width: 33%;
+    margin-top: 1rem;
+  }
+
   &_img {
     width: 40%;
     max-width: 147px;

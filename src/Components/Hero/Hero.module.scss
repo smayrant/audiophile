@@ -2,15 +2,20 @@
 @use "../../Styles/mixins.scss";
 
 .hero {
-  margin-top: 0;
-  padding-top: 8rem;
-  padding-bottom: 28rem;
-  background-color: variables.$main-black;
-  background-image: url("../../Assets/Images/hero-headphones.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
+  &_mainContainer {
+    height: 40rem;
+    width: 100%;
+    background-color: variables.$light-black;
+    background-image: url("../../Assets/Images/hero-headphones.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: relative;
+
+    @media (min-width: 768px) {
+      background-image: url("../../Assets/Images/hero-headphones-tablet.jpg");
+    }
+  }
 
   &_textContainer {
     position: absolute;

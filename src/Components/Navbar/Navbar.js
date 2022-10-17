@@ -16,16 +16,18 @@ function Navbar() {
       <div className={classes.navbar}>
         <header className={classes.navbar_header}>
           <div className={classes.navbar_headerContainer}>
-            <button
-              onClick={() => {
-                setIsMenuOpen(!isMenuOpen);
-              }}
-            >
-              <img src={hamburger} alt="Hamburger menu icon" />
-            </button>
-            <Link to="/">
-              <img src={logo} alt="Audiophile logo" />
-            </Link>
+            <div className={classes.navbar_leftContainer}>
+              <button
+                onClick={() => {
+                  setIsMenuOpen(!isMenuOpen);
+                }}
+              >
+                <img src={hamburger} alt="Hamburger menu icon" />
+              </button>
+              <Link to="/">
+                <img src={logo} alt="Audiophile logo" />
+              </Link>
+            </div>
             <button
               onClick={() => {
                 setIsCartOpen(true);

@@ -2,7 +2,7 @@
 @use "../../Styles/variables.scss";
 
 .navbar {
-  background-color: variables.$black;
+  background-color: variables.$light-black;
   color: variables.$white;
   padding: 2.05rem 0;
 
@@ -17,6 +17,11 @@
       background: none;
       cursor: pointer;
     }
+  }
+
+  &_leftContainer {
+    display: flex;
+    justify-content: space-between;
   }
 
   &_menuOpen {

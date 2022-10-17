@@ -3,14 +3,22 @@ import Backdrop from "../UI/Backdrop/Backdrop";
 import classes from "./OrderConfirmation.module.scss";
 import checkmarkIcon from "../../Assets/Images/order-confirmation-checkmark.svg";
 import SummaryItem from "../SummaryItem/SummaryItem";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { Link } from "react-router-dom";
+import { cartActions } from "../../store/cart-slice";
 
 function OrderConfirmation(props) {
   const cartItems = useSelector((state) => state.cart.items);
   const [showOtherItems, setShowOtherItems] = useState(false);
 
-  const handleViewOtherItems = () => {
+  const dispatch = useDispatch();
+
+  const viewOtherItemsHandler = () => {
     setShowOtherItems(!showOtherItems);
+  };
+
+  const emptyCartHandler = () => {
+    dispatch(cartActions.emptyCart());
   };
 
   const otherCartItems = cartItems.slice(1);
@@ -20,7 +28,6 @@ function OrderConfirmation(props) {
       <div className={classes.orderConfirmation}>
         <div className={classes.orderConfirmation_headerContainer}>
           <img src={checkmarkIcon} alt="Order Confirmation Checkmark Icon" />
-          <button className={classes.orderConfirmation_closeButton}>X</button>
         </div>
         <h4>thank you for your order</h4>
         <p className={classes.orderConfirmation_text}>
@@ -29,7 +36,7 @@ function OrderConfirmation(props) {
         <div className={classes.orderConfirmation_orderContainer}>
           <div className={classes.orderConfirmation_orderInfo}>
             <div className={classes.orderConfirmation_itemContainer}>
-              <ui>
+              <ul>
                 <li className={classes.orderConfirmation_firstCartItem}>
                   <SummaryItem
                     className={classes.orderConfirmation_otherCartItem__active}
@@ -59,13 +66,13 @@ function OrderConfirmation(props) {
                     </li>
                   );
                 })}
-              </ui>
+              </ul>
             </div>
             {cartItems.length > 1 && (
               <div className={classes.orderConfirmation_btnContainer}>
                 <hr />
                 <button
-                  onClick={handleViewOtherItems}
+                  onClick={viewOtherItemsHandler}
                   className={classes.orderConfirmation_toggleItemsBtn}
                 >
                   {!showOtherItems
@@ -83,6 +90,11 @@ function OrderConfirmation(props) {
               className={classes.orderConfirmation_grandTotal}
             >{`$${props.grandTotal.toFixed(2)}`}</span>
           </div>
+        </div>
+        <div className={classes.orderConfirmation_backHomeBtn}>
+          <Link to="/">
+            <button onClick={emptyCartHandler}>back to home</button>
+          </Link>
         </div>
       </div>
     </Fragment>

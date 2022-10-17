@@ -4,12 +4,6 @@
 .orderConfirmation {
   @include mixins.modal;
 
-  &_headerContainer {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-  }
-
   &_closeButton {
     @include mixins.closeButton;
   }
@@ -87,5 +81,12 @@
 
   &_otherCartItem__inactive {
     display: none;
+  }
+
+  &_backHomeBtn {
+    button {
+      @include mixins.orangeButton;
+      width: 100%;
+    }
   }
 }
