@@ -1,6 +1,12 @@
 @use "../../../../Styles/mixins.scss";
 
 .zx9 {
+  &_inTheBoxContainer {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
   &_inTheBox {
     @include mixins.center;
     margin-bottom: 1.5rem;
@@ -9,6 +15,11 @@
   &_mayLike_heading {
     text-align: center;
   }
+
+  &_seeProductContainer {
+    @include mixins.seeProductContainer;
+  }
+
   h4 {
     @include mixins.h4;
   }

@@ -69,6 +69,10 @@
   font-weight: 700;
   letter-spacing: 0.85px;
   line-height: 36px;
+
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+  }
 }
 
 @mixin h5 {
@@ -91,6 +95,16 @@
 // mixin to remove styling for any ul
 @mixin ul {
   padding-left: 0;
+}
+
+// mixin for the container of the SeeProduct component
+@mixin seeProductContainer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 // mixin for the increase and decrease quantity buttons as well as the quantity itself

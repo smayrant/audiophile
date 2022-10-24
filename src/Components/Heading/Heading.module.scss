@@ -6,11 +6,19 @@
   padding: 1.23rem;
   margin-bottom: 4rem;
 
-  h4 {
+  @media (min-width: 768px) {
+    padding: 6.5625rem 15.125rem 6.0625rem;
+  }
+
+  h3 {
     @include mixins.h3;
     color: variables.$light-grey;
     text-align: center;
     margin-bottom: 1rem;
     margin-top: 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+    }
   }
 }

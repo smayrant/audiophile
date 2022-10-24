@@ -14,7 +14,7 @@ function Navbar() {
   return (
     <Fragment>
       <div className={classes.navbar}>
-        <header className={classes.navbar_header}>
+        <div className={classes.navbar_header}>
           <div className={classes.navbar_headerContainer}>
             <div className={classes.navbar_leftContainer}>
               <button
@@ -36,7 +36,7 @@ function Navbar() {
               <img src={cart} alt="Cart icon" />
             </button>
           </div>
-        </header>
+        </div>
       </div>
       <div
         className={

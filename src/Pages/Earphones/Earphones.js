@@ -1,6 +1,8 @@
 import Heading from "../../Components/Heading/Heading";
 import Navbar from "../../Components/Navbar/Navbar";
-import img from "../../Assets/Images/category-page-earphones-mobile.jpg";
+import yx1Img from "../../Assets/Images/category-page-earphones-mobile.jpg";
+import yx1ImgTablet from "../../Assets/Images/category-page-earphones-tablet.jpg";
+import yx1ImgDesktop from "../../Assets/Images/category-page-earphones-desktop.jpg";
 import ProductDetailSm from "../../Components/ProductDetailSm/ProductDetailSm";
 import BestGear from "../../Components/BestGear/BestGear";
 import Footer from "../../Components/Footer/Footer";
@@ -17,7 +19,9 @@ function Earphones() {
       <div className={classes.productDetailSm_container}>
         <ProductDetailSm
           newProduct={true}
-          imgSrc={img}
+          mobileImg={yx1Img}
+          tabletImg={yx1ImgTablet}
+          desktopImg={yx1ImgDesktop}
           title={"yx1 wireless earphones"}
           text={text}
           seeProduct={true}

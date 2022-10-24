@@ -7,6 +7,11 @@
 
   &_infoContainer {
     text-align: center;
+
+    @media (min-width: 768px) {
+      max-width: 580px;
+      margin: 0 auto;
+    }
   }
 
   img {
@@ -14,11 +19,18 @@
     border-radius: variables.$radius;
   }
 
-  h4 {
+  h3 {
     @include mixins.h3;
 
     span {
       color: variables.$light-brown;
+    }
+
+    @media (min-width: 768px) {
+      font-size: 2.5rem;
+      max-width: 573px;
+      margin: 4rem auto 2rem;
+      text-align: center;
     }
   }
 

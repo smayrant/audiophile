@@ -7,29 +7,50 @@
   &Container {
     background-color: variables.$light-brown;
     background-image: url("../../Assets/Images/pattern-circles.svg");
-    background-size: 175%;
+    background-size: 120%;
     background-repeat: no-repeat;
-    background-position: 50% -170%;
+    background-position: 50% 136%;
     text-align: center;
     border-radius: variables.$radius;
     padding-top: 5rem;
     padding-bottom: 3rem;
     color: variables.$white;
+
     img {
       width: 50%;
+      max-width: 207px;
+
+      @media (min-width: 768px) {
+        max-width: 237px;
+      }
     }
 
     h2 {
       @include mixins.h2;
+      margin-bottom: 1.5rem;
       span {
         display: block;
+
+        @media (min-width: 768px) {
+          margin-top: 1rem;
+        }
+      }
+
+      @media (min-width: 768px) {
+        font-size: 3.5rem;
       }
     }
 
     p {
       @include mixins.text;
       color: variables.$light-grey;
+      opacity: 0.75;
       max-width: 320px;
+      margin: 0 auto;
+
+      @media (min-width: 768px) {
+        max-width: 349px;
+      }
     }
 
     button {

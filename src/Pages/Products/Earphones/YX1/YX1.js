@@ -45,23 +45,25 @@ function YX1() {
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
       <h4 className={classes.yx1_inTheBox}>in the box</h4>
-      <ul>
-        <li>
-          <InTheBoxItem qty={2} boxItem={"earphone unit"} />
-        </li>
-        <li>
-          <InTheBoxItem qty={6} boxItem={"multi-size earplugs"} />
-        </li>
-        <li>
-          <InTheBoxItem qty={1} boxItem={"user manual"} />
-        </li>
-        <li>
-          <InTheBoxItem qty={1} boxItem={"USB-C charging cable"} />
-        </li>
-        <li>
-          <InTheBoxItem qty={1} boxItem={"travel pouch"} />
-        </li>
-      </ul>
+      <div className={classes.yx1_inTheBoxContainer}>
+        <ul>
+          <li>
+            <InTheBoxItem qty={2} boxItem={"earphone unit"} />
+          </li>
+          <li>
+            <InTheBoxItem qty={6} boxItem={"multi-size earplugs"} />
+          </li>
+          <li>
+            <InTheBoxItem qty={1} boxItem={"user manual"} />
+          </li>
+          <li>
+            <InTheBoxItem qty={1} boxItem={"USB-C charging cable"} />
+          </li>
+          <li>
+            <InTheBoxItem qty={1} boxItem={"travel pouch"} />
+          </li>
+        </ul>
+      </div>
 
       <PictureContainer
         img1={galleryImg1}

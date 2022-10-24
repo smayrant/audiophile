@@ -1,11 +1,21 @@
 @use "../../../../Styles/mixins.scss";
 
 .xx59 {
+  &_inTheBoxContainer {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
   h4 {
     @include mixins.center;
     @include mixins.h4;
     margin-bottom: 2.5rem;
     text-align: center;
+  }
+
+  &_seeProductContainer {
+    @include mixins.seeProductContainer;
   }
 
   ul {

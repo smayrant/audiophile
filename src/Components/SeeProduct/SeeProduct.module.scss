@@ -22,4 +22,8 @@
     margin-bottom: 3.5rem;
     @include mixins.orangeButton;
   }
+
+  @media (min-width: 768px) {
+    width: 33%;
+  }
 }

@@ -5,11 +5,21 @@
     text-align: center;
   }
 
+  &_inTheBoxContainer {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
   &_mayLike_heading,
   &_inTheBox {
     @include mixins.center;
     @include mixins.h4;
     margin-bottom: 2.5rem;
+  }
+
+  &_seeProductContainer {
+    @include mixins.seeProductContainer;
   }
 
   ul {

@@ -1,6 +1,12 @@
 @use "../../../../Styles/mixins.scss";
 
 .zx7 {
+  &_inTheBoxContainer {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
   &_inTheBox {
     @include mixins.center;
     margin-bottom: 1.5rem;

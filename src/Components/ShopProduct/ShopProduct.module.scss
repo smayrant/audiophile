@@ -14,20 +14,26 @@
     max-width: 147px;
     position: absolute;
     translate: -50% -35%;
+
+    @media (min-width: 768px) {
+      width: 65%;
+      max-width: 187px;
+    }
   }
 
   &_detailContainer {
     background-color: variables.$grey;
     border-radius: variables.$radius;
-    padding: 5.5rem 2rem 0.5rem;
+    padding: 4rem 2rem 1.5rem;
 
     h5 {
-      font-size: 1.125rem;
+      font-size: 15px;
       text-transform: uppercase;
       letter-spacing: 1.07px;
       font-weight: 700;
       margin-top: 1.5rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
+      line-height: 20px;
     }
 
     p {

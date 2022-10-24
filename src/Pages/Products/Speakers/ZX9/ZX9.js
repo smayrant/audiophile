@@ -1,5 +1,7 @@
 import ProductDetailSm from "../../../../Components/ProductDetailSm/ProductDetailSm";
-import zx9Img from "../../../../Assets/Images/category-page-zx9-mobile.jpg";
+import zx9ImgMobile from "../../../../Assets/Images/zx9-product-mobile.jpg";
+import zx9ImgTablet from "../../../../Assets/Images/zx9-product-tablet.jpg";
+import zx9ImgDesktop from "../../../../Assets/Images/zx9-product-desktop.jpg";
 import Navbar from "../../../../Components/Navbar/Navbar";
 import classes from "./ZX9.module.scss";
 import GoBackButton from "../../../../Components/UI/GoBackButton/GoBackButton";
@@ -10,12 +12,24 @@ import SeeProduct from "../../../../Components/SeeProduct/SeeProduct";
 import ShopProductContainer from "../../../../Components/ShopProductContainer/ShopProductContainer";
 import BestGear from "../../../../Components/BestGear/BestGear";
 import Footer from "../../../../Components/Footer/Footer";
-import galleryImg1 from "../../../../Assets/Images/zx9-gallery-1-mobile.jpg";
-import galleryImg2 from "../../../../Assets/Images/zx9-gallery-2-mobile.jpg";
-import galleryImg3 from "../../../../Assets/Images/zx9-gallery-3-mobile.jpg";
-import mayLikeImg1 from "../../../../Assets/Images/zx7-mayLike-mobile.jpg";
-import mayLikeImg2 from "../../../../Assets/Images/xx99-mayLike-mobile.jpg";
-import mayLikeImg3 from "../../../../Assets/Images/xx59-mayLike-mobile.jpg";
+import galleryImg1Mobile from "../../../../Assets/Images/zx9-gallery-1-mobile.jpg";
+import galleryImg1Tablet from "../../../../Assets/Images/zx9-gallery-1-tablet.jpg";
+import galleryImg1Desktop from "../../../../Assets/Images/zx9-gallery-1-desktop.jpg";
+import galleryImg2Mobile from "../../../../Assets/Images/zx9-gallery-2-mobile.jpg";
+import galleryImg2Tablet from "../../../../Assets/Images/zx9-gallery-2-tablet.jpg";
+import galleryImg2Desktop from "../../../../Assets/Images/zx9-gallery-2-desktop.jpg";
+import galleryImg3Mobile from "../../../../Assets/Images/zx9-gallery-3-mobile.jpg";
+import galleryImg3Tablet from "../../../../Assets/Images/zx9-gallery-3-tablet.jpg";
+import galleryImg3Desktop from "../../../../Assets/Images/zx9-gallery-3-desktop.jpg";
+import mayLikeImg1Mobile from "../../../../Assets/Images/zx7-mayLike-mobile.jpg";
+import mayLikeImg1Tablet from "../../../../Assets/Images/zx7-mayLike-tablet.jpg";
+import mayLikeImg1Desktop from "../../../../Assets/Images/zx7-mayLike-desktop.jpg";
+import mayLikeImg2Mobile from "../../../../Assets/Images/xx99-mayLike-mobile.jpg";
+import mayLikeImg2Tablet from "../../../../Assets/Images/xx99-mayLike-tablet.jpg";
+import mayLikeImg2Desktop from "../../../../Assets/Images/xx99-mayLike-desktop.jpg";
+import mayLikeImg3Mobile from "../../../../Assets/Images/xx59-mayLike-mobile.jpg";
+import mayLikeImg3Tablet from "../../../../Assets/Images/xx59-mayLike-tablet.jpg";
+import mayLikeImg3Desktop from "../../../../Assets/Images/xx59-mayLike-desktop.jpg";
 import cartImg from "../../../../Assets/Images/zx9-cart.jpg";
 
 function ZX9() {
@@ -33,7 +47,9 @@ function ZX9() {
       <GoBackButton />
       <ProductDetailSm
         newProduct={true}
-        imgSrc={zx9Img}
+        mobileImg={zx9ImgMobile}
+        tabletImg={zx9ImgTablet}
+        desktopImg={zx9ImgDesktop}
         title={"zx9 speaker"}
         text={zx9Text}
         seeProduct={false}
@@ -44,49 +60,67 @@ function ZX9() {
         cartImg={cartImg}
       />
       <Features paragraph1={paragraph1} paragraph2={paragraph2} />
-      <h4 className={classes.zx9_inTheBox}>in the box</h4>
-      <ul>
-        <li>
-          <InTheBoxItem qty={2} boxItem={"speaker unit"} />
-        </li>
-        <li>
-          <InTheBoxItem qty={2} boxItem={"speaker cloth panel"} />
-        </li>
-        <li>
-          <InTheBoxItem qty={1} boxItem={"user manual"} />
-        </li>
-        <li>
-          <InTheBoxItem qty={1} boxItem={"3.5mm 10m audio cable"} />
-        </li>
-        <li>
-          <InTheBoxItem qty={1} boxItem={"10m optical cable"} />
-        </li>
-      </ul>
+
+      <div className={classes.zx9_inTheBoxContainer}>
+        <h4 className={classes.zx9_inTheBox}>in the box</h4>
+        <ul>
+          <li>
+            <InTheBoxItem qty={2} boxItem={"speaker unit"} />
+          </li>
+          <li>
+            <InTheBoxItem qty={2} boxItem={"speaker cloth panel"} />
+          </li>
+          <li>
+            <InTheBoxItem qty={1} boxItem={"user manual"} />
+          </li>
+          <li>
+            <InTheBoxItem qty={1} boxItem={"3.5mm 10m audio cable"} />
+          </li>
+          <li>
+            <InTheBoxItem qty={1} boxItem={"10m optical cable"} />
+          </li>
+        </ul>
+      </div>
 
       <PictureContainer
-        img1={galleryImg1}
-        img2={galleryImg2}
-        img3={galleryImg3}
+        mobileImg1={galleryImg1Mobile}
+        mobileImg2={galleryImg2Mobile}
+        mobileImg3={galleryImg3Mobile}
+        tabletImg1={galleryImg1Tablet}
+        tabletImg2={galleryImg2Tablet}
+        tabletImg3={galleryImg3Tablet}
+        desktopImg1={galleryImg1Desktop}
+        desktopImg2={galleryImg2Desktop}
+        desktopImg3={galleryImg3Desktop}
       />
       <h4 className={classes.zx9_mayLike_heading}>you may also like</h4>
+      <div className={classes.zx9_seeProductContainer}>
+
       <SeeProduct
-        imgSrc={mayLikeImg1}
+        mobileImg={mayLikeImg1Mobile}
+        tabletImg={mayLikeImg1Tablet}
+        desktopImg={mayLikeImg1Desktop}
         imgAlt={"ZX7 Speaker"}
         title={"zx7 speaker"}
         seeProductLink={"/products/zx7-speaker"}
-      />
+        />
       <SeeProduct
-        imgSrc={mayLikeImg2}
+        mobileImg={mayLikeImg2Mobile}
+        tabletImg={mayLikeImg2Tablet}
+        desktopImg={mayLikeImg2Desktop}
         imgAlt={"XX99 Mark I Headphones"}
         title={"xx99 mark i"}
         seeProductLink={"/products/mark-i-headphones"}
       />
       <SeeProduct
-        imgSrc={mayLikeImg3}
+        mobileImg={mayLikeImg3Mobile}
+        tabletImg={mayLikeImg3Tablet}
+        desktopImg={mayLikeImg3Desktop}
         imgAlt={"XX59 Headphones"}
         title={"xx59"}
         seeProductLink={"/products/xx59-headphones"}
-      />
+        />
+        </div>
       <ShopProductContainer />
       <BestGear />
       <Footer />

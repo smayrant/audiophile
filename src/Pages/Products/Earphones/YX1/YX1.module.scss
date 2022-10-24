@@ -6,6 +6,12 @@
     margin-bottom: 1.5rem;
   }
 
+  &_inTheBoxContainer {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
   &_mayLike_heading {
     text-align: center;
   }

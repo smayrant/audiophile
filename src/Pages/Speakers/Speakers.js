@@ -2,7 +2,11 @@ import Heading from "../../Components/Heading/Heading";
 import Navbar from "../../Components/Navbar/Navbar";
 import ProductDetailSm from "../../Components/ProductDetailSm/ProductDetailSm";
 import zx9Img from "../../Assets/Images/category-page-zx9-mobile.jpg";
+import zx9ImgTablet from "../../Assets/Images/category-page-zx9-tablet.jpg";
+import zx9ImgDesktop from "../../Assets/Images/category-page-zx9-desktop.jpg";
 import zx7Img from "../../Assets/Images/category-page-zx7-mobile.jpg";
+import zx7ImgTablet from "../../Assets/Images/category-page-zx7-tablet.jpg";
+import zx7ImgDesktop from "../../Assets/Images/category-page-zx7-desktop.jpg";
 import ShopProductContainer from "../../Components/ShopProductContainer/ShopProductContainer";
 import BestGear from "../../Components/BestGear/BestGear";
 import Footer from "../../Components/Footer/Footer";
@@ -22,7 +26,9 @@ function Speakers() {
       <div className={classes.productDetailSm_container}>
         <ProductDetailSm
           newProduct={true}
-          imgSrc={zx9Img}
+          mobileImg={zx9Img}
+          tabletImg={zx9ImgTablet}
+          desktopImg={zx9ImgDesktop}
           title={"zx9 speaker"}
           text={zx9Text}
           seeProduct={true}
@@ -33,7 +39,9 @@ function Speakers() {
       <div className={classes.productDetailSm_container}>
         <ProductDetailSm
           newProduct={false}
-          imgSrc={zx7Img}
+          mobileImg={zx7Img}
+          tabletImg={zx7ImgTablet}
+          desktopImg={zx7ImgDesktop}
           title={"zx7 speaker"}
           text={zx7Text}
           seeProduct={true}

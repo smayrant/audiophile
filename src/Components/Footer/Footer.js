@@ -32,28 +32,30 @@ function Footer() {
           helping you get the most out of personal audio. Come and visit our
           demo facility - we’re open 7 days a week.
         </p>
-        <p className={classes.footer_copyright}>
-          Copyright 2022. All Rights Reserved
-        </p>
-        <nav>
-          <ul className={classes.footer_iconContainer}>
-            <li>
-              <a href="https://www.facebook.com/">
-                <img src={facebook} alt="Facebook icon" />
-              </a>
-            </li>
-            <li>
-              <a href="https://twitter.com/">
-                <img src={twitter} alt="Twitter icon" />
-              </a>
-            </li>
-            <li>
-              <a href="https://instagram.com/">
-                <img src={instagram} alt="Instagram icon" />
-              </a>
-            </li>
-          </ul>
-        </nav>
+        <div className={classes.footer_copyrightLinkContainer}>
+          <p className={classes.footer_copyright}>
+            Copyright 2022. All Rights Reserved
+          </p>
+          <nav>
+            <ul className={classes.footer_iconContainer}>
+              <li>
+                <a href="https://www.facebook.com/">
+                  <img src={facebook} alt="Facebook icon" />
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/">
+                  <img src={twitter} alt="Twitter icon" />
+                </a>
+              </li>
+              <li>
+                <a href="https://instagram.com/">
+                  <img src={instagram} alt="Instagram icon" />
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
   );

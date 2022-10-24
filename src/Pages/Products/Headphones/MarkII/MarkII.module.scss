@@ -20,9 +20,19 @@
     }
   }
 
+  &_inTheBoxContainer {
+    @media (min-width: 768px) {
+      display: flex;
+    }
+  }
+
   &_inTheBox {
     @include mixins.center;
     margin-bottom: 1.5rem;
+  }
+
+  &_seeProductContainer {
+   @include mixins.seeProductContainer;
   }
 
   ul {

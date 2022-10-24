@@ -3,21 +3,16 @@ import speaker from "../../Assets/Images/speaker-zx9-mobile.png";
 import speakerTablet from "../../Assets/Images/speaker-zx9-tablet.png";
 import speakerDesktop from "../../Assets/Images/speaker-zx9-desktop.png";
 import { Link } from "react-router-dom";
-import useWindowWidth from "../../hooks/useWindowWidth";
 
 function ZX9Speaker() {
-  const windowSize = useWindowWidth();
-  const imageUrl =
-    windowSize >= 960
-      ? speakerDesktop
-      : windowSize <= 768
-      ? speaker
-      : speakerTablet;
-
   return (
     <div className={classes.zx9}>
       <div className={classes.zx9Container}>
-        <img src={imageUrl} alt="ZX9 Speaker" />
+        <picture>
+          <source media="(min-width: 960px)" srcset={speakerDesktop} />
+          <source media="(min-width: 768px)" srcset={speakerTablet} />
+          <img src={speaker} alt={"ZX9 speaker"} />
+        </picture>
         <h2>
           zx9 <span>speaker</span>
         </h2>
