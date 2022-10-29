@@ -2,7 +2,7 @@
 
 // mixin to center items on page within container
 @mixin center {
-  max-width: 1300px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
 }
@@ -171,7 +171,6 @@
   background-color: variables.$white;
   border-radius: variables.$radius;
   padding: 2rem;
-  max-width: 377px;
 }
 
 @mixin closeButton {

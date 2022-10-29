@@ -4,24 +4,34 @@
 .orderConfirmation {
   @include mixins.modal;
 
+  @media (min-width: 768px) {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 540px;
+  }
+
   &_closeButton {
     @include mixins.closeButton;
   }
 
   h4 {
     @include mixins.h4;
+
+    @media (min-width: 768px) {
+      margin-bottom: 0;
+      span {
+        display: block;
+        width: 240px;
+      }
+    }
   }
 
   p {
     @include mixins.text;
     color: variables.$black;
     opacity: 0.5;
-  }
-
-  &_orderInfo {
-    background-color: variables.$grey;
-    border-radius: variables.$radius;
-    padding: 0.8rem;
+    margin-bottom: 2rem;
   }
 
   &_itemContainer {
@@ -50,6 +60,23 @@
     margin: 0 auto;
   }
 
+  &_orderContainer {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 60% 40%;
+    }
+  }
+
+  &_orderInfo {
+    background-color: variables.$grey;
+    border-radius: variables.$radius;
+    padding: 0.8rem;
+
+    @media (min-width: 768px) {
+      border-radius: variables.$radius 0 0 variables.$radius;
+    }
+  }
+
   &_totalContainer {
     display: flex;
     flex-direction: column;
@@ -58,6 +85,11 @@
     padding-top: 1rem;
     padding-bottom: 1.6rem;
     border-radius: 0 0 variables.$radius variables.$radius;
+
+    @media (min-width: 768px) {
+      border-radius: 0 0 variables.$radius 0;
+      justify-content: center;
+    }
   }
 
   &_grandTotal__text {

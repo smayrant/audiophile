@@ -12,7 +12,7 @@ function ShopProduct(props) {
       />
       <div className={classes.shopProduct_detailContainer}>
         <h5>{props.productName}</h5>
-        <Link to={`/${props.productName}`}>
+        <Link className={classes.shopProduct_link} to={`/${props.productName}`}>
           shop{" "}
           <span>
             <img src={rightArrow} alt="Right arrow icon" />

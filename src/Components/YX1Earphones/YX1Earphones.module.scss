@@ -11,6 +11,11 @@
     gap: 0.6875rem;
   }
 
+  @media (min-width: 992px) {
+    gap: 1.875rem;
+    margin-bottom: 12rem;
+  }
+
   &_infoContainer {
     margin-top: 1.5rem;
     background-color: variables.$grey;
@@ -30,14 +35,18 @@
         margin-top: 0;
       }
     }
+  }
 
-    div {
-      margin-left: 26px;
-      @media (min-width: 768px) {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+  &_info {
+    margin-left: 26px;
+    @media (min-width: 768px) {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    @media (min-width: 992px) {
+      margin-left: 5.93rem;
     }
   }
 

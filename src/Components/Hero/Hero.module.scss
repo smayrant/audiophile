@@ -2,17 +2,26 @@
 @use "../../Styles/mixins.scss";
 
 .hero {
+  background-color: variables.$light-black;
   &_mainContainer {
     height: 33rem;
-    background-color: variables.$light-black;
     background-image: url("../../Assets/Images/hero-headphones.jpg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center top;
     position: relative;
+    @include mixins.center;
 
     @media (min-width: 768px) {
       background-image: url("../../Assets/Images/hero-headphones-tablet.jpg");
+    }
+
+    @media (min-width: 992px) {
+      background-image: url("../../Assets/Images/hero-headphones-desktop.jpg");
+      background-size: 65rem;
+      background-position: 100% 0;
+      padding-bottom: 9rem;
+      height: 28rem;
     }
   }
 
@@ -24,6 +33,12 @@
     @include mixins.center;
     text-align: center;
     max-width: 380px;
+
+    @media (min-width: 992px) {
+      text-align: left;
+      left: 0;
+      transform: translate(0, -50%);
+    }
 
     h5 {
       @include mixins.newProduct;

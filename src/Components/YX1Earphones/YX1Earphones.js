@@ -9,12 +9,12 @@ function YX1Earphones() {
   return (
     <div className={classes.yx1}>
       <picture>
-        <source media="(min-width: 960px)" srcset={earphonesDesktop} />
-        <source media="(min-width: 768px)" srcset={earphonesTablet} />
+        <source media="(min-width: 992px)" srcSet={earphonesDesktop} />
+        <source media="(min-width: 768px)" srcSet={earphonesTablet} />
         <img src={earphones} alt={"ZX7 speaker on stand"} />
       </picture>
       <div className={classes.yx1_infoContainer}>
-        <div>
+        <div className={classes.yx1_info}>
           <h4>yx1 earphones</h4>
           <Link to="/products/yx1-earphones">
             <button>see product</button>

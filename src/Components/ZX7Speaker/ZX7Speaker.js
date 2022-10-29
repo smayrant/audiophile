@@ -8,8 +8,8 @@ function ZX7Speaker() {
   return (
     <div className={classes.zx7}>
       <picture>
-        <source media="(min-width: 960px)" srcset={speakerDesktop} />
-        <source media="(min-width: 768px)" srcset={speakerTablet} />
+        <source media="(min-width: 992px)" srcSet={speakerDesktop} />
+        <source media="(min-width: 768px)" srcSet={speakerTablet} />
         <img src={speaker} alt={"ZX7 speaker on stand"} />
       </picture>
       <div className={classes.zx7_info}>

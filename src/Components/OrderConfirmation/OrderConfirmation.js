@@ -29,7 +29,9 @@ function OrderConfirmation(props) {
         <div className={classes.orderConfirmation_headerContainer}>
           <img src={checkmarkIcon} alt="Order Confirmation Checkmark Icon" />
         </div>
-        <h4>thank you for your order</h4>
+        <h4>
+          <span>thank you</span> for your order
+        </h4>
         <p className={classes.orderConfirmation_text}>
           You will receive an email confirmation shortly.
         </p>

@@ -3,15 +3,11 @@
 
 .cartModal {
   @include mixins.modal;
+  max-width: 377px;
 
-  &_backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    z-index: 10;
-    background: rgba(0, 0, 0, 0.75);
+  @media (min-width: 768px) {
+    top: 12%;
+    transform: translateX(-20%);
   }
 
   &_closeBtn {
@@ -31,10 +27,13 @@
   &_headingContainer {
     display: flex;
     justify-content: space-between;
-    margin-top: 1.25rem;
+    align-items: flex-start;
+    color: variables.$black;
+    margin-bottom: 1rem;
 
     h5 {
       @include mixins.h5;
+      margin: 0;
     }
 
     button {

@@ -7,8 +7,8 @@ function BestGear() {
   return (
     <div className={classes.bestGear}>
       <picture>
-        <source media="(min-width: 960px)" srcset={bestGearImgDesktop} />
-        <source media="(min-width: 768px)" srcset={bestGearImgTablet} />
+        <source media="(min-width: 992px)" srcSet={bestGearImgDesktop} />
+        <source media="(min-width: 768px)" srcSet={bestGearImgTablet} />
         <img
           src={bestGearImg}
           alt={"Male sitting and listening to audio on headphones"}

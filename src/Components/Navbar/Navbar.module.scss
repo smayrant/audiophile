@@ -4,7 +4,9 @@
 .navbar {
   background-color: variables.$light-black;
   color: variables.$white;
-  padding: 2.05rem 0;
+  padding: 2.12rem 0;
+  position: relative;
+  z-index: 500;
 
   &_headerContainer {
     @include mixins.center;
@@ -22,21 +24,29 @@
   &_leftContainer {
     display: flex;
     justify-content: space-between;
+
+    @media (min-width: 992px) {
+      button {
+        display: none;
+      }
+    }
   }
 
-  &_menuOpen {
-    display: block;
-  }
-
-  &_menuClosed {
+  &_linkContainer {
     display: none;
+
+    @media (min-width: 992px) {
+      display: flex;
+      gap: 34px;
+    }
   }
 
-  &_cartOpen {
-    display: block;
-  }
-
-  &_cartClosed {
-    display: none;
+  &_link {
+    color: variables.$white;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
   }
 }

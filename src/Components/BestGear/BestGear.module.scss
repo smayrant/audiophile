@@ -5,12 +5,24 @@
   @include mixins.center;
   margin-top: 7rem;
 
+  @media (min-width: 992px) {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 95px;
+    align-items: center;
+  }
+
   &_infoContainer {
     text-align: center;
 
     @media (min-width: 768px) {
       max-width: 580px;
       margin: 0 auto;
+    }
+
+    @media (min-width: 992px) {
+      max-width: 465px;
+      text-align: left;
     }
   }
 
@@ -30,7 +42,6 @@
       font-size: 2.5rem;
       max-width: 573px;
       margin: 4rem auto 2rem;
-      text-align: center;
     }
   }
 

@@ -5,6 +5,7 @@ import { cartActions } from "../../store/cart-slice";
 import CartItem from "../CartItem/CartItem";
 import { Link } from "react-router-dom";
 import Backdrop from "../UI/Backdrop/Backdrop";
+import ReactDOM from "react-dom";
 
 function CartModal(props) {
   const cartItems = useSelector((state) => state.cart.items);
@@ -23,16 +24,12 @@ function CartModal(props) {
 
   return (
     <Fragment>
-      <Backdrop />
+      {ReactDOM.createPortal(
+        <Backdrop />,
+        document.getElementById("backdrop-portal")
+      )}
       <div className={classes.cartModal}>
-        <button
-          onClick={toggleVisibility}
-          className={classes.cartModal_closeBtn}
-        >
-          X
-        </button>
-
-        {/* If there are no items in the cart, display an empty cart message. Otherwise, list the items in the cart, total and checkout button */}
+        {/* If there are no items in the cart, display an empty cart message. Otherwise, list the items in the cart, the total and checkout button */}
         {cartItems.length > 0 ? (
           <div>
             <div className={classes.cartModal_headingContainer}>
@@ -56,7 +53,10 @@ function CartModal(props) {
               >{`$${cartTotal}`}</span>
             </div>
             <Link to={"/checkout"}>
-              <button className={classes.cartModal_checkoutBtn}>
+              <button
+                onClick={toggleVisibility}
+                className={classes.cartModal_checkoutBtn}
+              >
                 checkout
               </button>
             </Link>

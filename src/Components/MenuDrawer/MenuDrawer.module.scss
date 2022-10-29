@@ -1,0 +1,10 @@
+@use "../../Styles/variables.scss";
+
+.menuDrawer {
+  position: absolute;
+  top: 6rem;
+  z-index: 500;
+  width: 100%;
+  background-color: white;
+  border-radius: 0 0 variables.$radius variables.$radius;
+}

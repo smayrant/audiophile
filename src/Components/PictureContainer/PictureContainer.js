@@ -18,18 +18,18 @@ function PictureContainer(props) {
   return (
     <div className={classes.pictureContainer}>
       <picture className={classes.pictureContainer_img1}>
-        <source media="(min-width: 960px)" srcset={desktopImg1} />
-        <source media="(min-width: 768px)" srcset={tabletImg1} />
+        <source media="(min-width: 992px)" srcSet={desktopImg1} />
+        <source media="(min-width: 768px)" srcSet={tabletImg1} />
         <img src={mobileImg1} alt={alt1} />
       </picture>
       <picture className={classes.pictureContainer_img2}>
-        <source media="(min-width: 960px)" srcset={desktopImg2} />
-        <source media="(min-width: 768px)" srcset={tabletImg2} />
+        <source media="(min-width: 992px)" srcSet={desktopImg2} />
+        <source media="(min-width: 768px)" srcSet={tabletImg2} />
         <img src={mobileImg2} alt={alt2} />
       </picture>
       <picture className={classes.pictureContainer_img3}>
-        <source media="(min-width: 960px)" srcset={desktopImg3} />
-        <source media="(min-width: 768px)" srcset={tabletImg3} />
+        <source media="(min-width: 992px)" srcSet={desktopImg3} />
+        <source media="(min-width: 768px)" srcSet={tabletImg3} />
         <img src={mobileImg3} alt={alt3} />
       </picture>
     </div>

@@ -128,57 +128,61 @@ function Checkout() {
         <form>
           <fieldset>
             <legend>billing details</legend>
-            <div className={classes.checkout_inputContainer}>
-              <div className={classes.checkout_labelContainer}>
-                <label className={classes.checkout_label} htmlFor="name">
-                  Name
-                </label>
-                {!formInputValidity.name && (
-                  <span className={classes.checkout_errorMessage}>
-                    {"Please enter a name"}
-                  </span>
-                )}
-              </div>
+            <div className={classes.checkout_inputContainer_outer}>
+              <div className={classes.checkout_inputContainer}>
+                <div className={classes.checkout_labelContainer}>
+                  <label className={classes.checkout_label} htmlFor="name">
+                    Name
+                  </label>
+                  {!formInputValidity.name && (
+                    <span className={classes.checkout_errorMessage}>
+                      {"Please enter a name"}
+                    </span>
+                  )}
+                </div>
 
-              <input
-                required
-                className={
-                  formInputValidity.name
-                    ? classes["checkout_input"]
-                    : `${classes.checkout_input} ${classes.invalid}`
-                }
-                type="text"
-                name="name"
-                placeholder="Alexei Ward"
-                id="name"
-                ref={nameInputRef}
-              />
-            </div>
-            <div className={classes.checkout_inputContainer}>
-              <div className={classes.checkout_labelContainer}>
-                <label className={classes.checkout_label} htmlFor="email">
-                  Email Address
-                </label>
-                {!formInputValidity.email && (
-                  <span className={classes.checkout_errorMessage}>
-                    {"Please enter a valid email "}
-                  </span>
-                )}
+                <input
+                  required
+                  className={
+                    formInputValidity.name
+                      ? classes["checkout_input"]
+                      : `${classes.checkout_input} ${classes.invalid}`
+                  }
+                  type="text"
+                  name="name"
+                  placeholder="Alexei Ward"
+                  id="name"
+                  ref={nameInputRef}
+                />
               </div>
-              <input
-                className={
-                  formInputValidity.email
-                    ? classes["checkout_input"]
-                    : `${classes.checkout_input} ${classes.invalid}`
-                }
-                type="email"
-                name="email"
-                placeholder="alexei@mail.com"
-                id="email"
-                ref={emailInputRef}
-              />
+              <div className={classes.checkout_inputContainer}>
+                <div className={classes.checkout_labelContainer}>
+                  <label className={classes.checkout_label} htmlFor="email">
+                    Email Address
+                  </label>
+                  {!formInputValidity.email && (
+                    <span className={classes.checkout_errorMessage}>
+                      {"Please enter a valid email "}
+                    </span>
+                  )}
+                </div>
+                <input
+                  className={
+                    formInputValidity.email
+                      ? classes["checkout_input"]
+                      : `${classes.checkout_input} ${classes.invalid}`
+                  }
+                  type="email"
+                  name="email"
+                  placeholder="alexei@mail.com"
+                  id="email"
+                  ref={emailInputRef}
+                />
+              </div>
             </div>
-            <div className={classes.checkout_inputContainer}>
+            <div
+              className={`${classes.checkout_inputContainer} ${classes.checkout_inputContainer_phone}`}
+            >
               <div className={classes.checkout_labelContainer}>
                 <label
                   className={classes.checkout_label}
@@ -235,86 +239,88 @@ function Checkout() {
                 ref={addressInputRef}
               />
             </div>
-            <div className={classes.checkout_inputContainer}>
-              <div className={classes.checkout_labelContainer}>
-                <label className={classes.checkout_label} htmlFor="zip">
-                  Zip Code
-                </label>
-                {!formInputValidity.zip && (
-                  <span className={classes.checkout_errorMessage}>
-                    {"Please enter a valid zip "}
-                  </span>
-                )}
-              </div>
-              <input
-                className={
-                  formInputValidity.zip
-                    ? classes["checkout_input"]
-                    : `${classes.checkout_input} ${classes.invalid}`
-                }
-                type="text"
-                name="zip"
-                placeholder="10001"
-                pattern="[0-9]{5}"
-                id="zip"
-                ref={zipInputRef}
-              />
-            </div>
-            <div className={classes.checkout_inputContainer}>
-              <div>
+            <div className={classes.checkout_inputContainer_outer}>
+              <div className={classes.checkout_inputContainer}>
                 <div className={classes.checkout_labelContainer}>
-                  <label className={classes.checkout_label} htmlFor="city">
-                    City
+                  <label className={classes.checkout_label} htmlFor="zip">
+                    Zip Code
                   </label>
-                  {!formInputValidity.city && (
+                  {!formInputValidity.zip && (
                     <span className={classes.checkout_errorMessage}>
-                      {"Please enter a valid city "}
+                      {"Please enter a valid zip "}
                     </span>
                   )}
                 </div>
+                <input
+                  className={
+                    formInputValidity.zip
+                      ? classes["checkout_input"]
+                      : `${classes.checkout_input} ${classes.invalid}`
+                  }
+                  type="text"
+                  name="zip"
+                  placeholder="10001"
+                  pattern="[0-9]{5}"
+                  id="zip"
+                  ref={zipInputRef}
+                />
               </div>
-              <input
-                className={
-                  formInputValidity.city
-                    ? classes["checkout_input"]
-                    : `${classes.checkout_input} ${classes.invalid}`
-                }
-                type="text"
-                name="city"
-                placeholder="New York"
-                id="city"
-                ref={cityInputRef}
-              />
-            </div>
-            <div className={classes.checkout_inputContainer}>
-              <div className={classes.checkout_labelContainer}>
-                <label className={classes.checkout_label} htmlFor="country">
-                  Country
-                </label>
-                {!formInputValidity.country && (
-                  <span className={classes.checkout_errorMessage}>
-                    {"Please enter a valid country "}
-                  </span>
-                )}
+              <div className={classes.checkout_inputContainer}>
+                <div>
+                  <div className={classes.checkout_labelContainer}>
+                    <label className={classes.checkout_label} htmlFor="city">
+                      City
+                    </label>
+                    {!formInputValidity.city && (
+                      <span className={classes.checkout_errorMessage}>
+                        {"Please enter a valid city "}
+                      </span>
+                    )}
+                  </div>
+                </div>
+                <input
+                  className={
+                    formInputValidity.city
+                      ? classes["checkout_input"]
+                      : `${classes.checkout_input} ${classes.invalid}`
+                  }
+                  type="text"
+                  name="city"
+                  placeholder="New York"
+                  id="city"
+                  ref={cityInputRef}
+                />
               </div>
-              <input
-                className={
-                  formInputValidity.country
-                    ? classes["checkout_input"]
-                    : `${classes.checkout_input} ${classes.invalid}`
-                }
-                type="text"
-                name="country"
-                placeholder="United States"
-                id="country"
-                ref={countryInputRef}
-              />
+              <div className={classes.checkout_inputContainer}>
+                <div className={classes.checkout_labelContainer}>
+                  <label className={classes.checkout_label} htmlFor="country">
+                    Country
+                  </label>
+                  {!formInputValidity.country && (
+                    <span className={classes.checkout_errorMessage}>
+                      {"Please enter a valid country "}
+                    </span>
+                  )}
+                </div>
+                <input
+                  className={
+                    formInputValidity.country
+                      ? classes["checkout_input"]
+                      : `${classes.checkout_input} ${classes.invalid}`
+                  }
+                  type="text"
+                  name="country"
+                  placeholder="United States"
+                  id="country"
+                  ref={countryInputRef}
+                />
+              </div>
             </div>
           </fieldset>
           <fieldset>
             <legend>payment details</legend>
             <span className={classes.checkout_label}>Payment Method</span>
-            <div>
+            <div className={classes.checkout_radioContainer_outer}>
               <div className={classes.checkout_radioContainer}>
                 <label
                   className={classes.checkout_paymentLabel}

@@ -15,6 +15,15 @@
     padding-top: 5rem;
     padding-bottom: 3rem;
     color: variables.$white;
+    overflow: hidden;
+
+    @media (min-width: 992px) {
+      display: flex;
+      background-size: 90%;
+      background-position: -150% 10%;
+      padding-top: 2rem;
+      justify-content: space-between;
+    }
 
     img {
       width: 50%;
@@ -22,6 +31,14 @@
 
       @media (min-width: 768px) {
         max-width: 237px;
+      }
+
+      @media (min-width: 992px) {
+        max-width: 480px;
+        width: 80%;
+        position: relative;
+        bottom: -14%;
+        left: 15%;
       }
     }
 
@@ -55,6 +72,13 @@
 
     button {
       @include mixins.blackButton;
+    }
+  }
+
+  &_infoContainer {
+    @media (min-width: 992px) {
+      text-align: left;
+      transform: translateY(10%);
     }
   }
 }

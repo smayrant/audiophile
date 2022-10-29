@@ -39,8 +39,8 @@ function ProductDetailSm(props) {
         }
       >
         <picture>
-          <source media="(min-width: 960px)" srcset={desktopImg} />
-          <source media="(min-width: 768px)" srcset={tabletImg} />
+          <source media="(min-width: 992px)" srcSet={desktopImg} />
+          <source media="(min-width: 768px)" srcSet={tabletImg} />
           <img
             className={classes.productDetailSm_img}
             src={mobileImg}

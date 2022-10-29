@@ -7,10 +7,24 @@
   margin-left: 24px;
   background-color: variables.$white;
 
+  &_inputContainer_outer {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+  }
+
   &_inputContainer {
     display: flex;
     flex: 1 1 100%;
     flex-direction: column;
+  }
+
+  &_inputContainer_phone {
+    @media (min-width: 768px) {
+      width: 49.5%;
+    }
   }
 
   &_labelContainer {
@@ -34,6 +48,15 @@
     border: 1px variables.$inputError solid;
   }
 
+  &_radioContainer_outer {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      width: 48.5%;
+      margin-left: auto;
+    }
+  }
+
   &_radioContainer {
     margin-top: 0.55rem;
     margin-bottom: 1.5rem;
@@ -51,6 +74,14 @@
       line-height: 19.12px;
       letter-spacing: -0.25px;
       font-weight: 700;
+    }
+  }
+
+  &_eMoneyContainer {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: repeat(2, 0.5fr);
+      gap: 1rem;
     }
   }
 
@@ -126,6 +157,15 @@
   }
 
   &_codContainer {
+    display: flex;
+    flex-direction: column;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+
     div {
       text-align: center;
     }
