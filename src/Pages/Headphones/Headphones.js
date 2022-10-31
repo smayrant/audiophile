@@ -53,6 +53,7 @@ function Headphones() {
           seeProduct={true}
           addToCart={false}
           seeProductLink={"/products/mark-i-headphones"}
+          reverseFlex={true}
         />
       </div>
       <div className={classes.productDetailSm_container}>

@@ -59,27 +59,29 @@ function MarkII() {
         name={"xx99 mk ii"}
         cartImg={cartImg}
       />
-      <Features paragraph1={paragraph1} paragraph2={paragraph2} />
+      <div className={classes.markII_featuresContainer}>
+        <Features paragraph1={paragraph1} paragraph2={paragraph2} />
 
-      <div className={classes.markII_inTheBoxContainer}>
-        <h4 className={classes.markII_inTheBox}>in the box</h4>
-        <ul>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"headphone unit"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={2} boxItem={"replacement earcups"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"user manual"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"3.5mm 5m audio cable"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"travel bag"} />
-          </li>
-        </ul>
+        <div className={classes.markII_inTheBoxContainer}>
+          <h4 className={classes.markII_inTheBox}>in the box</h4>
+          <ul>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"headphone unit"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={2} boxItem={"replacement earcups"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"user manual"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"3.5mm 5m audio cable"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"travel bag"} />
+            </li>
+          </ul>
+        </div>
       </div>
 
       <PictureContainer

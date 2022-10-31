@@ -17,6 +17,7 @@ function ProductDetailSm(props) {
     desktopImg,
     cartImg,
     quantity,
+    reverseFlex,
   } = props;
 
   const addToCartHandler = () => {
@@ -32,10 +33,14 @@ function ProductDetailSm(props) {
   };
   return (
     <div className={classes.productDetailSm}>
+      {/* element is given a specific class name based on truthiness of props to determine the styles that are applied to the element. If this component is used in a category page, it's given the productInfo_container class, if the element needs to be reversed, it is given the 'reverse' modifier. If the component is used in the product detail page to add products to the cart it is given the addProductToCart class*/}
       <div
         className={
-          props.addToCart &&
-          `${classes.addProductToCart} ${classes.productDetailSm_productInfo_container}`
+          props.addToCart
+            ? `${classes.addProductToCart}`
+            : !reverseFlex
+            ? `${classes.productDetailSm_productInfo_container}`
+            : `${classes.productDetailSm_productInfo_container} ${classes.productDetailSm_productInfo_container_reverse}`
         }
       >
         <picture>

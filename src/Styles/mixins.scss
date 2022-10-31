@@ -104,6 +104,11 @@
 
   @media (min-width: 768px) {
     flex-direction: row;
+    gap: 11px;
+  }
+
+  @media (min-width: 992px) {
+    gap: 30px;
   }
 }
 

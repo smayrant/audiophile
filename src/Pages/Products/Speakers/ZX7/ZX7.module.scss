@@ -5,11 +5,20 @@
     @media (min-width: 768px) {
       display: flex;
     }
+
+    @media (min-width: 992px) {
+      flex-direction: column;
+      flex-basis: 35%;
+    }
   }
 
   &_inTheBox {
     @include mixins.center;
     margin-bottom: 1.5rem;
+
+    @media (min-width: 992px) {
+      margin-left: 0;
+    }
   }
 
   &_mayLike_heading {
@@ -18,6 +27,18 @@
 
   &_seeProductContainer {
     @include mixins.seeProductContainer;
+    @include mixins.center;
+  }
+
+  &_featuresContainer {
+    @include mixins.center;
+
+    @media (min-width: 992px) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 7.8125rem;
+    }
   }
 
   h4 {
@@ -27,6 +48,10 @@
   ul {
     @include mixins.ul;
     @include mixins.center;
+
+    @media (min-width: 992px) {
+      margin-left: 0;
+    }
 
     li {
       margin-bottom: 0.5rem;

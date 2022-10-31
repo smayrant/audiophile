@@ -9,23 +9,25 @@ function Footer() {
   return (
     <div className={classes.footer}>
       <div className={classes.footer_container}>
-        <img src={logo} alt="Logo" />
-        <nav>
-          <ul className={classes.footer_links}>
-            <Link to="/">
-              <li>home</li>
-            </Link>
-            <Link to="/headphones">
-              <li>headphones</li>
-            </Link>
-            <Link to="/speakers">
-              <li>speakers</li>
-            </Link>
-            <Link to="/earphones">
-              <li>earphones</li>
-            </Link>
-          </ul>
-        </nav>
+        <div className={classes.footer_navLogoContainer}>
+          <img className={classes.footer_logo} src={logo} alt="Logo" />
+          <nav>
+            <ul className={classes.footer_links}>
+              <Link to="/">
+                <li>home</li>
+              </Link>
+              <Link to="/headphones">
+                <li>headphones</li>
+              </Link>
+              <Link to="/speakers">
+                <li>speakers</li>
+              </Link>
+              <Link to="/earphones">
+                <li>earphones</li>
+              </Link>
+            </ul>
+          </nav>
+        </div>
         <p className={classes.footer_text}>
           Audiophile is an all in one stop to fulfill your audio needs. We're a
           small team of music lovers and sound specialists who are devoted to

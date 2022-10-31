@@ -59,26 +59,29 @@ function YX1() {
         name={"yx1"}
         cartImg={cartImg}
       />
-      <Features paragraph1={paragraph1} paragraph2={paragraph2} />
-      <h4 className={classes.yx1_inTheBox}>in the box</h4>
-      <div className={classes.yx1_inTheBoxContainer}>
-        <ul>
-          <li>
-            <InTheBoxItem qty={2} boxItem={"earphone unit"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={6} boxItem={"multi-size earplugs"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"user manual"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"USB-C charging cable"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"travel pouch"} />
-          </li>
-        </ul>
+
+      <div className={classes.yx1_featuresContainer}>
+        <Features paragraph1={paragraph1} paragraph2={paragraph2} />
+        <div className={classes.yx1_inTheBoxContainer}>
+          <h4 className={classes.yx1_inTheBox}>in the box</h4>
+          <ul>
+            <li>
+              <InTheBoxItem qty={2} boxItem={"earphone unit"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={6} boxItem={"multi-size earplugs"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"user manual"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"USB-C charging cable"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"travel pouch"} />
+            </li>
+          </ul>
+        </div>
       </div>
 
       <PictureContainer

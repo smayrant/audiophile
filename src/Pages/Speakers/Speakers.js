@@ -47,6 +47,7 @@ function Speakers() {
           seeProduct={true}
           addToCart={false}
           seeProductLink={"/products/zx7-speaker"}
+          reverseFlex={true}
         />
       </div>
       <ShopProductContainer />

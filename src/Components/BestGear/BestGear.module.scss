@@ -10,6 +10,8 @@
     flex-direction: row-reverse;
     gap: 95px;
     align-items: center;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
   }
 
   &_infoContainer {
@@ -23,6 +25,7 @@
     @media (min-width: 992px) {
       max-width: 465px;
       text-align: left;
+      margin-left: 0;
     }
   }
 

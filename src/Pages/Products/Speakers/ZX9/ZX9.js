@@ -59,27 +59,29 @@ function ZX9() {
         name={"zx9"}
         cartImg={cartImg}
       />
-      <Features paragraph1={paragraph1} paragraph2={paragraph2} />
+      <div className={classes.zx9_featuresContainer}>
+        <Features paragraph1={paragraph1} paragraph2={paragraph2} />
 
-      <div className={classes.zx9_inTheBoxContainer}>
-        <h4 className={classes.zx9_inTheBox}>in the box</h4>
-        <ul>
-          <li>
-            <InTheBoxItem qty={2} boxItem={"speaker unit"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={2} boxItem={"speaker cloth panel"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"user manual"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"3.5mm 10m audio cable"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"10m optical cable"} />
-          </li>
-        </ul>
+        <div className={classes.zx9_inTheBoxContainer}>
+          <h4 className={classes.zx9_inTheBox}>in the box</h4>
+          <ul>
+            <li>
+              <InTheBoxItem qty={2} boxItem={"speaker unit"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={2} boxItem={"speaker cloth panel"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"user manual"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"3.5mm 10m audio cable"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"10m optical cable"} />
+            </li>
+          </ul>
+        </div>
       </div>
 
       <PictureContainer
@@ -95,32 +97,31 @@ function ZX9() {
       />
       <h4 className={classes.zx9_mayLike_heading}>you may also like</h4>
       <div className={classes.zx9_seeProductContainer}>
-
-      <SeeProduct
-        mobileImg={mayLikeImg1Mobile}
-        tabletImg={mayLikeImg1Tablet}
-        desktopImg={mayLikeImg1Desktop}
-        imgAlt={"ZX7 Speaker"}
-        title={"zx7 speaker"}
-        seeProductLink={"/products/zx7-speaker"}
+        <SeeProduct
+          mobileImg={mayLikeImg1Mobile}
+          tabletImg={mayLikeImg1Tablet}
+          desktopImg={mayLikeImg1Desktop}
+          imgAlt={"ZX7 Speaker"}
+          title={"zx7 speaker"}
+          seeProductLink={"/products/zx7-speaker"}
         />
-      <SeeProduct
-        mobileImg={mayLikeImg2Mobile}
-        tabletImg={mayLikeImg2Tablet}
-        desktopImg={mayLikeImg2Desktop}
-        imgAlt={"XX99 Mark I Headphones"}
-        title={"xx99 mark i"}
-        seeProductLink={"/products/mark-i-headphones"}
-      />
-      <SeeProduct
-        mobileImg={mayLikeImg3Mobile}
-        tabletImg={mayLikeImg3Tablet}
-        desktopImg={mayLikeImg3Desktop}
-        imgAlt={"XX59 Headphones"}
-        title={"xx59"}
-        seeProductLink={"/products/xx59-headphones"}
+        <SeeProduct
+          mobileImg={mayLikeImg2Mobile}
+          tabletImg={mayLikeImg2Tablet}
+          desktopImg={mayLikeImg2Desktop}
+          imgAlt={"XX99 Mark I Headphones"}
+          title={"xx99 mark i"}
+          seeProductLink={"/products/mark-i-headphones"}
         />
-        </div>
+        <SeeProduct
+          mobileImg={mayLikeImg3Mobile}
+          tabletImg={mayLikeImg3Tablet}
+          desktopImg={mayLikeImg3Desktop}
+          imgAlt={"XX59 Headphones"}
+          title={"xx59"}
+          seeProductLink={"/products/xx59-headphones"}
+        />
+      </div>
       <ShopProductContainer />
       <BestGear />
       <Footer />

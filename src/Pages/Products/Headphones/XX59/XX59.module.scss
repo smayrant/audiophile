@@ -5,6 +5,11 @@
     @media (min-width: 768px) {
       display: flex;
     }
+
+    @media (min-width: 992px) {
+      flex-direction: column;
+      flex-basis: 35%;
+    }
   }
 
   h4 {
@@ -14,8 +19,20 @@
     text-align: center;
   }
 
+  &_featuresContainer {
+    @include mixins.center;
+
+    @media (min-width: 992px) {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 7.8125rem;
+    }
+  }
+
   &_seeProductContainer {
     @include mixins.seeProductContainer;
+    @include mixins.center;
   }
 
   ul {

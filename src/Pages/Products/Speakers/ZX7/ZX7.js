@@ -59,26 +59,28 @@ function ZX7() {
         name={"zx7"}
         cartImg={cartImg}
       />
-      <Features paragraph1={paragraph1} paragraph2={paragraph2} />
-      <div className={classes.zx7_inTheBoxContainer}>
-        <h4 className={classes.zx7_inTheBox}>in the box</h4>
-        <ul>
-          <li>
-            <InTheBoxItem qty={2} boxItem={"speaker unit"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={2} boxItem={"speaker cloth panel"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"user manual"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"3.5mm 7.5m audio cable"} />
-          </li>
-          <li>
-            <InTheBoxItem qty={1} boxItem={"7.5m optical cable"} />
-          </li>
-        </ul>
+      <div className={classes.zx7_featuresContainer}>
+        <Features paragraph1={paragraph1} paragraph2={paragraph2} />
+        <div className={classes.zx7_inTheBoxContainer}>
+          <h4 className={classes.zx7_inTheBox}>in the box</h4>
+          <ul>
+            <li>
+              <InTheBoxItem qty={2} boxItem={"speaker unit"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={2} boxItem={"speaker cloth panel"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"user manual"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"3.5mm 7.5m audio cable"} />
+            </li>
+            <li>
+              <InTheBoxItem qty={1} boxItem={"7.5m optical cable"} />
+            </li>
+          </ul>
+        </div>
       </div>
 
       <PictureContainer

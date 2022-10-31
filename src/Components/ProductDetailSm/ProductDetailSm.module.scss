@@ -8,6 +8,37 @@
   &_productInfo_container {
     display: flex;
     flex-direction: column;
+
+    @media (min-width: 992px) {
+      flex-direction: row;
+      gap: 10rem;
+      align-items: center;
+      margin-bottom: 160px;
+    }
+  }
+
+  &_productInfo {
+    @media (min-width: 992px) {
+      flex-basis: 100%;
+      text-align: left;
+      max-width: 445px;
+
+      h3 {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &_productInfo_container {
+    @media (min-width: 992px) {
+      flex-direction: row;
+    }
+  }
+
+  &_productInfo_container_reverse {
+    @media (min-width: 992px) {
+      flex-direction: row-reverse;
+    }
   }
 
   &_img {
@@ -15,6 +46,10 @@
 
     @media (min-width: 768px) {
       margin-bottom: 3.25rem;
+    }
+
+    @media (min-width: 992px) {
+      margin-bottom: 0;
     }
   }
 
@@ -109,11 +144,16 @@
 }
 
 // styling given to the ProductDetailSm components that are utilized for adding items to cart. Overrides the styling for the ProductDetailSm components used in other components/routes
-@media (min-width: 768px) {
-  .addProductToCart {
+.addProductToCart {
+  @media (min-width: 768px) {
     display: grid;
     grid-template-columns: 40% auto;
     gap: 4.3125rem;
     align-items: center;
+  }
+
+  @media (min-width: 992px) {
+    gap: 7.775rem;
+    grid-template-columns: 50% auto;
   }
 }

@@ -3,8 +3,6 @@
 
 .checkout {
   @include mixins.center;
-  margin-right: 24px;
-  margin-left: 24px;
   background-color: variables.$white;
 
   &_inputContainer_outer {

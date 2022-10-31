@@ -6,11 +6,20 @@
   margin-top: 5.5rem;
   margin-bottom: 5.5rem;
 
+  @media (min-width: 992px) {
+    margin-top: 0;
+    flex-basis: 65%;
+  }
+
   &_title {
     @include mixins.h4;
 
     @media (min-width: 768px) {
       font-size: 2.25rem;
+    }
+
+    @media (min-width: 992px) {
+      margin-top: 0;
     }
   }
 

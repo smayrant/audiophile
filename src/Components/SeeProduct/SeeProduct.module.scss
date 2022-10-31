@@ -2,7 +2,6 @@
 @use "../../Styles/variables.scss";
 
 .seeProduct {
-  @include mixins.center;
   text-align: center;
 
   img {
