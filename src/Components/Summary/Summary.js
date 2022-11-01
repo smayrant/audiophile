@@ -1,6 +1,5 @@
 import classes from "./Summary.module.scss";
 import SummaryItem from "../SummaryItem/SummaryItem";
-import Footer from "../Footer/Footer";
 import { Fragment } from "react";
 import { useSelector } from "react-redux";
 
@@ -62,7 +61,6 @@ function Summary(props) {
           continue & pay
         </button>
       </div>
-      <Footer />
     </Fragment>
   );
 }

@@ -4,6 +4,7 @@
 .bestGear {
   @include mixins.center;
   margin-top: 7rem;
+  margin-bottom: 7.5rem;
 
   @media (min-width: 992px) {
     display: flex;

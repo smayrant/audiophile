@@ -1,9 +1,33 @@
 @use "../../Styles/mixins.scss";
 @use "../../Styles/variables.scss";
 
-.checkout {
+.checkoutContainer_main {
+  background-color: #f2f2f2;
+  padding-bottom: 15rem;
+}
+
+.checkoutContainer {
   @include mixins.center;
+  @media (min-width: 992px) {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+  }
+}
+
+.checkout {
+  padding: 24px 24px 31px 24px;
   background-color: variables.$white;
+  border-radius: variables.$radius;
+
+  @media (min-width: 768px) {
+    padding: 30px 27px 30px 27px;
+  }
+
+  @media (min-width: 992px) {
+    flex-basis: 60%;
+    padding: 54px 48px 48px 48px;
+  }
 
   &_inputContainer_outer {
     @media (min-width: 768px) {
