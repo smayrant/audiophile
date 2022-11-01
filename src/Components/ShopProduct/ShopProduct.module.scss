@@ -1,4 +1,5 @@
 @use "../../Styles/variables.scss";
+@use "../../Styles/mixins.scss";
 
 .shopProduct {
   position: relative;
@@ -11,8 +12,21 @@
 
   &_link {
     text-transform: uppercase;
-    font-weight: 600;
-    font-size: 15px;
+    font-weight: 700;
+    font-size: 13px;
+    color: variables.$black;
+    opacity: 0.5;
+    letter-spacing: 1px;
+    line-height: 18px;
+
+    &:hover {
+      @include mixins.transition;
+      color: variables.$light-brown;
+    }
+
+    span {
+      margin-left: 6px;
+    }
   }
 
   &_img {

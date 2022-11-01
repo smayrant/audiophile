@@ -35,6 +35,12 @@
 
     button {
       @include mixins.transparentButton;
+
+      &:hover {
+        @include mixins.transition;
+        background-color: variables.$black;
+        color: variables.$white;
+      }
     }
   }
 }

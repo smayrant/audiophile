@@ -48,5 +48,10 @@
     line-height: 25px;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    &:hover {
+      @include mixins.transition;
+      color: variables.$light-brown;
+    }
   }
 }

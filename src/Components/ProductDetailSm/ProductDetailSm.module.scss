@@ -130,12 +130,22 @@
 
   &_seeProduct__btn {
     @include mixins.orangeButton;
+
+    &:hover {
+      @include mixins.transition;
+      background-color: variables.$peach;
+    }
   }
 }
 
 #productDetailSm_addToCart {
   @include mixins.orangeButton;
   margin-top: 0;
+
+  &:hover {
+    @include mixins.transition;
+    background-color: variables.$peach;
+  }
 }
 
 // class that's conditionally added to the product's heading to center the text

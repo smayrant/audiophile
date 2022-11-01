@@ -7,6 +7,11 @@
   padding: 0 24px;
 }
 
+// mixin for transition speed
+@mixin transition {
+  transition: 0.3s;
+}
+
 // button mixins
 @mixin button {
   border: none;

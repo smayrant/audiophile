@@ -20,6 +20,11 @@
     margin-top: 0;
     margin-bottom: 3.5rem;
     @include mixins.orangeButton;
+
+    &:hover {
+      @include mixins.transition;
+      background-color: variables.$peach;
+    }
   }
 
   @media (min-width: 768px) {

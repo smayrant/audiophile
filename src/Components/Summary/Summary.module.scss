@@ -56,5 +56,10 @@
   &_button {
     @include mixins.orangeButton;
     width: 100%;
+
+    &:hover {
+      @include mixins.transition;
+      background-color: variables.$peach;
+    }
   }
 }

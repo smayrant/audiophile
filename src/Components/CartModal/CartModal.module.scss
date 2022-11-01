@@ -15,13 +15,6 @@
     left: 60%;
   }
 
-  &_closeBtn {
-    @include mixins.closeButton;
-    position: absolute;
-    right: 0;
-    padding-right: 2rem;
-  }
-
   &_emptyMsg {
     color: variables.$black;
     opacity: 0.5;
@@ -79,5 +72,10 @@
   &_checkoutBtn {
     @include mixins.orangeButton;
     width: 100%;
+
+    &:hover {
+      @include mixins.transition;
+      background-color: variables.$peach;
+    }
   }
 }

@@ -72,6 +72,11 @@
 
     button {
       @include mixins.blackButton;
+
+      &:hover {
+        @include mixins.transition;
+        background-color: variables.$greyButton;
+      }
     }
   }
 

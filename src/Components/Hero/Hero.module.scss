@@ -67,6 +67,11 @@
 
     button {
       @include mixins.orangeButton;
+
+      &:hover {
+        @include mixins.transition;
+        background-color: variables.$peach;
+      }
     }
   }
 }

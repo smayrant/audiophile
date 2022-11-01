@@ -50,6 +50,14 @@
     text-transform: uppercase;
     font-weight: 600;
 
+    li {
+      &:hover {
+        @include mixins.transition;
+
+        color: variables.$light-brown;
+      }
+    }
+
     @media (min-width: 768px) {
       display: flex;
       gap: 34px;
@@ -116,6 +124,17 @@
       bottom: 33%;
       right: 0;
       padding-right: 24px;
+    }
+
+    li {
+      a {
+        img {
+          &:hover {
+            @include mixins.transition;
+            fill: variables.$light-brown;
+          }
+        }
+      }
     }
   }
 
