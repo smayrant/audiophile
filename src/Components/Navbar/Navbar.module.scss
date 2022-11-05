@@ -24,6 +24,7 @@
   &_leftContainer {
     display: flex;
     justify-content: space-between;
+    gap: 42px;
 
     @media (min-width: 992px) {
       button {
@@ -52,6 +53,25 @@
     &:hover {
       @include mixins.transition;
       color: variables.$light-brown;
+    }
+  }
+
+  &_cartBtn {
+    position: relative;
+
+    span {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      width: 5px;
+      height: 5px;
+      padding: 0.6rem;
+      background-color: variables.$light-brown;
+      color: variables.$white;
+      top: -16px;
+      left: 20px;
+      border-radius: 50%;
+      font-size: 0.8rem;
     }
   }
 }

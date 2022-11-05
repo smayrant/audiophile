@@ -10,6 +10,27 @@ import codIcon from "../../Assets/Images/cod-icon.svg";
 
 const isEmpty = (value) => value.trim().length === 0;
 
+const validateEmail = (email) => {
+  if (
+    String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+  ) {
+    return true;
+  }
+  return false;
+};
+
+const validatePhoneNum = (phone) => {
+  const validNum = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+  if (String(phone).match(validNum)) {
+    return true;
+  }
+  return false;
+};
+
 function Checkout() {
   const cartTotal = useSelector((state) => state.cart.cartTotal);
   const cartItems = useSelector((state) => state.cart.items);
@@ -52,19 +73,18 @@ function Checkout() {
     const enteredZip = zipInputRef.current.value;
     const enteredCity = cityInputRef.current.value;
     const enteredCountry = countryInputRef.current.value;
-
-    let enteredEMoneyNum = "";
-    let enteredEMoneyPin = "";
+    const enteredEMoneyNum = eMoneyView ? eMoneyNumInputRef.current.value : "";
+    const enteredEMoneyPin = eMoneyView ? eMoneyPinInputRef.current.value : "";
 
     const enteredNameIsValid = !isEmpty(enteredName);
-    const enteredEmailIsValid = !isEmpty(enteredEmail);
-    const enteredPhoneIsValid = !isEmpty(enteredPhone);
+    const enteredEmailIsValid = validateEmail(enteredEmail);
+    const enteredPhoneIsValid = validatePhoneNum(enteredPhone);
     const enteredAddressIsValid = !isEmpty(enteredAddress);
-    const enteredZipIsValid = !isEmpty(enteredZip);
+    const enteredZipIsValid = /(^\d{5}$)|(^\d{5}-\d{4}$)/.test(enteredZip);
     const enteredCityIsValid = !isEmpty(enteredCity);
     const enteredCountryIsValid = !isEmpty(enteredCountry);
-    const enteredEMoneyNumIsValid = !isEmpty(enteredEMoneyNum);
-    const enteredEMoneyPinIsValid = !isEmpty(enteredEMoneyPin);
+    const enteredEMoneyNumIsValid = /^\d{9}$/.test(enteredEMoneyNum);
+    const enteredEMoneyPinIsValid = /^\d{4}$/.test(enteredEMoneyPin);
 
     setFormInputValidity({
       name: enteredNameIsValid,
@@ -81,28 +101,25 @@ function Checkout() {
     let formIsValid = false;
 
     if (eMoneyView) {
-      enteredEMoneyNum = eMoneyNumInputRef.current.value;
-      enteredEMoneyPin = eMoneyPinInputRef.current.value;
-
       formIsValid =
-        enteredName &&
-        enteredEmail &&
-        enteredPhone &&
-        enteredAddress &&
-        enteredZip &&
-        enteredCity &&
-        enteredCountry &&
-        enteredEMoneyNum &&
-        enteredEMoneyPin;
+        enteredNameIsValid &&
+        enteredEmailIsValid &&
+        enteredPhoneIsValid &&
+        enteredAddressIsValid &&
+        enteredZipIsValid &&
+        enteredCityIsValid &&
+        enteredCountryIsValid &&
+        enteredEMoneyNumIsValid &&
+        enteredEMoneyPinIsValid;
     } else {
       formIsValid =
-        enteredName &&
-        enteredEmail &&
-        enteredPhone &&
-        enteredAddress &&
-        enteredZip &&
-        enteredCity &&
-        enteredCountry;
+        enteredNameIsValid &&
+        enteredEmailIsValid &&
+        enteredPhoneIsValid &&
+        enteredAddressIsValid &&
+        enteredZipIsValid &&
+        enteredCityIsValid &&
+        enteredCountryIsValid;
     }
 
     if (formIsValid) {
@@ -195,7 +212,7 @@ function Checkout() {
                     </label>
                     {!formInputValidity.phone && (
                       <span className={classes.checkout_errorMessage}>
-                        {"Please enter a valid email "}
+                        {"Please enter a 10 digit phone number "}
                       </span>
                     )}
                   </div>
@@ -208,7 +225,7 @@ function Checkout() {
                     type="tel"
                     pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                     name="phone"
-                    placeholder="+1 202-555-0136"
+                    placeholder="202-555-0136"
                     maxLength="12"
                     htmlFor="phone"
                     ref={phoneInputRef}
@@ -250,7 +267,7 @@ function Checkout() {
                       </label>
                       {!formInputValidity.zip && (
                         <span className={classes.checkout_errorMessage}>
-                          {"Please enter a valid zip "}
+                          {"Please enter a 5 digit zip code"}
                         </span>
                       )}
                     </div>
@@ -343,7 +360,10 @@ function Checkout() {
                         name="radioButton"
                         id="e-money"
                       />
-                      <span>e-Money</span>
+                      <span className={classes.checkout_radioBtn}></span>
+                      <span className={classes.checkout_radioLabel}>
+                        e-Money
+                      </span>
                     </label>
                   </div>
                   <div className={classes.checkout_radioContainer}>
@@ -358,7 +378,10 @@ function Checkout() {
                         name="radioButton"
                         id="cod"
                       />
-                      <span>Cash on Delivery</span>
+                      <span className={classes.checkout_radioBtn}></span>
+                      <span className={classes.checkout_radioLabel}>
+                        Cash on Delivery
+                      </span>
                     </label>
                   </div>
                 </div>
@@ -374,7 +397,7 @@ function Checkout() {
                         </span>
                         {!formInputValidity.eMoneyNum && (
                           <span className={classes.checkout_errorMessage}>
-                            {"Please enter a valid e number "}
+                            {"Please enter a valid 9 digit e number "}
                           </span>
                         )}
                       </div>
@@ -401,7 +424,7 @@ function Checkout() {
                         </span>
                         {!formInputValidity.eMoneyPin && (
                           <span className={classes.checkout_errorMessage}>
-                            {"Please enter a valid e pin "}
+                            {"Please enter a valid 4 digit pin "}
                           </span>
                         )}
                       </div>

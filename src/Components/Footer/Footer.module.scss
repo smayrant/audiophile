@@ -4,7 +4,6 @@
 .footer {
   background-color: variables.$main-black;
   text-align: center;
-  // margin-top: 7.5rem;
 
   @media (min-width: 768px) {
     text-align: left;
@@ -13,6 +12,24 @@
   &_container {
     @include mixins.center;
     padding-bottom: 2rem;
+    position: relative;
+
+    &::before {
+      background-color: variables.$light-brown;
+      content: "";
+      height: 4px;
+      left: 50%;
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      width: 101px;
+
+      @media (min-width: 768px) {
+        left: 0;
+        transform: unset;
+        margin-left: 24px;
+      }
+    }
 
     @media (min-width: 992px) {
       position: relative;

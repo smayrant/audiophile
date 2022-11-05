@@ -6,10 +6,14 @@ import hamburger from "../../Assets/Images/hamburger.svg";
 import CartModal from "../CartModal/CartModal";
 import { Link } from "react-router-dom";
 import Menu from "../Menu/Menu";
+import { useSelector } from "react-redux";
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isCartOpen, setIsCartOpen] = useState(false);
+
+  const cartQty = useSelector((state) => state.cart.totalQuantity);
+  console.log(cartQty > 0);
   return (
     <div className={classes.navbar}>
       <div className={classes.navbar_header}>
@@ -44,6 +48,7 @@ function Navbar() {
             </Link>
           </nav>
           <button
+            className={classes.navbar_cartBtn}
             onClick={() => {
               setIsCartOpen(!isCartOpen);
               if (isMenuOpen) {
@@ -52,6 +57,7 @@ function Navbar() {
             }}
           >
             <img src={cart} alt="Cart icon" />
+            {cartQty > 0 && <span>{cartQty}</span>}
           </button>
         </div>
       </div>
