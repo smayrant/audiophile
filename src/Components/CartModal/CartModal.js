@@ -25,7 +25,7 @@ function CartModal(props) {
   return (
     <Fragment>
       {ReactDOM.createPortal(
-        <Backdrop />,
+        <Backdrop removeBackdrop={toggleVisibility} />,
         document.getElementById("backdrop-portal")
       )}
       <div className={classes.cartModal}>
@@ -40,7 +40,7 @@ function CartModal(props) {
               <CartItem
                 key={item.id}
                 name={item.name}
-                price={item.price}
+                price={item.price.toLocaleString()}
                 quantity={item.quantity}
                 cartImg={item.cartImg}
                 id={item.id}
@@ -50,7 +50,7 @@ function CartModal(props) {
               <span className={classes.cartModal_total}>total</span>
               <span
                 className={classes.cartModal_totalPrice}
-              >{`$${cartTotal}`}</span>
+              >{`$${cartTotal.toLocaleString()}`}</span>
             </div>
             <Link to={"/checkout"}>
               <button

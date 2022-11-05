@@ -9,6 +9,7 @@ function Summary(props) {
   const shipping = 50;
   const vat = cartItems.length < 1 ? 0 : cartTotal * 0.2;
   const grandTotal = cartTotal + shipping + vat;
+  const formattedTotal = grandTotal;
   return (
     <Fragment>
       <div className={classes.summary}>
@@ -18,7 +19,10 @@ function Summary(props) {
             key={item.id}
             img={item.cartImg}
             name={item.name}
-            price={item.price}
+            price={item.price.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}
             quantity={item.quantity}
           />
         ))}
@@ -28,7 +32,10 @@ function Summary(props) {
               <td className={classes.summary_checkoutKey}>total</td>
               <td
                 className={classes.summary_checkoutValue}
-              >{`$${cartTotal}`}</td>
+              >{`$${cartTotal.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}`}</td>
             </tr>
             <tr>
               <td className={classes.summary_checkoutKey}>shipping</td>
@@ -38,9 +45,12 @@ function Summary(props) {
             </tr>
             <tr>
               <td className={classes.summary_checkoutKey}>vat (included)</td>
-              <td className={classes.summary_checkoutValue}>{`$${vat.toFixed(
-                2
-              )}`}</td>
+              <td
+                className={classes.summary_checkoutValue}
+              >{`$${vat.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}`}</td>
             </tr>
           </tbody>
           <tfoot>
@@ -49,7 +59,10 @@ function Summary(props) {
               <td className={classes.summary_checkoutKey}>grand total</td>
               <td
                 className={classes.summary_checkoutTotalValue}
-              >{`$${grandTotal.toFixed(2)}`}</td>
+              >{`$${formattedTotal.toLocaleString(undefined, {
+                minimumFractionDigits: 2,
+                maximumFractionDigits: 2,
+              })}`}</td>
             </tr>
           </tfoot>
         </table>

@@ -81,6 +81,10 @@
     @include mixins.qtyButtons;
     padding: 1.016rem 1.568rem;
     margin-top: 0;
+
+    &:hover {
+      color: variables.$light-brown;
+    }
   }
 
   &_qt {

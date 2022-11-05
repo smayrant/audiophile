@@ -45,13 +45,14 @@ function OrderConfirmation(props) {
                     key={cartItems[0].id}
                     img={cartItems[0].cartImg}
                     name={cartItems[0].name}
-                    price={cartItems[0].price}
+                    price={cartItems[0].price.toLocaleString()}
                     quantity={cartItems[0].quantity}
                   />
                 </li>
                 {otherCartItems.map((item) => {
                   return (
                     <li
+                      key={item.id.toString()}
                       className={`${
                         showOtherItems
                           ? classes.orderConfirmation_otherCartItem__active
@@ -59,10 +60,9 @@ function OrderConfirmation(props) {
                       }`}
                     >
                       <SummaryItem
-                        key={item.id}
                         img={item.cartImg}
                         name={item.name}
-                        price={item.price}
+                        price={item.price.toLocaleString()}
                         quantity={item.quantity}
                       />
                     </li>
@@ -90,7 +90,10 @@ function OrderConfirmation(props) {
             </span>
             <span
               className={classes.orderConfirmation_grandTotal}
-            >{`$${props.grandTotal.toFixed(2)}`}</span>
+            >{`$${props.grandTotal.toLocaleString(undefined, {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2,
+            })}`}</span>
           </div>
         </div>
         <div className={classes.orderConfirmation_backHomeBtn}>

@@ -13,7 +13,7 @@ function Navbar() {
   const [isCartOpen, setIsCartOpen] = useState(false);
 
   const cartQty = useSelector((state) => state.cart.totalQuantity);
-  console.log(cartQty > 0);
+
   return (
     <div className={classes.navbar}>
       <div className={classes.navbar_header}>

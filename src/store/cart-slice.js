@@ -1,4 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { toast } from "react-toastify";
 
 const cartSlice = createSlice({
   name: "cart",
@@ -47,6 +48,7 @@ const cartSlice = createSlice({
       }
       // reset the quantity of items to add to cart to 1
       state.qtyToAdd = 1;
+      toast.success("Item added to cart");
     },
     removeItemFromCart(state, action) {
       // retrieve the item's id from payload
@@ -67,6 +69,7 @@ const cartSlice = createSlice({
         existingItem.total -= existingItem.price;
         state.cartTotal -= existingItem.price;
       }
+      toast.warning("Item removed from cart");
     },
     // empty the cart, resetting the cart's total and total quantity to 0
     emptyCart(state) {
